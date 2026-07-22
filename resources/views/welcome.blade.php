@@ -35,9 +35,9 @@
 
     <section class="relative h-[819px] w-full flex items-center justify-center">
         <div class="absolute inset-0 z-0">
-            <div class="bg-cover bg-center w-full h-full"
-                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAwZn-lCdQov9xM2BPXuM9-RLU-FWou9KiX_l5N1jz-O_CAHwv4sHcqeZnMmNEv6xckX7339G7yFvjFAVcUWjFBI-6kmo1oz8ndBXvGlx5VndidSEFG-CAAlNcH-ZnzpbcOiI0KcCag10scU5qFmauypbtGkC7c2gsBzaLYAOFqCg3aohvdkmv2QPPQTreHRk4b4xB7Mdx-odtJpN49NhtN20PJxPyRE3fS5H47ITsKxUCf_tTe1WK_ebrqhDEwjU0RwFJC6RmDOxhC')">
-            </div>
+            <video autoplay muted loop playsinline class="w-full h-full object-cover">
+                <source src="{{ asset('assets/videos/Landing_page.mp4') }}" type="video/mp4">
+            </video>
             <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
         </div>
         <div class="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center gap-6">
