@@ -159,28 +159,48 @@
             </div>
         </div>
 
-        <div class="border-t border-on-primary/20 mt-12 w-full">
-            <div class="max-w-container-max mx-auto px-margin-mobile md:px-section-padding py-8 flex flex-col md:flex-row justify-between items-end gap-6">
-                <div class="flex flex-col gap-4 w-full md:w-auto text-center md:text-left">
-                    <h4 class="font-headline-md text-headline-md text-on-primary font-bold">Kerjasama dengan</h4>
-                    <div class="flex gap-4 items-center justify-center md:justify-start">
-                        <div class="w-14 h-14 rounded-full bg-white flex items-center justify-center overflow-hidden">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Lambang_Kabupaten_Magelang.png/300px-Lambang_Kabupaten_Magelang.png" alt="Logo Magelang" class="w-10 h-10 object-contain">
-                        </div>
-                        <div class="w-14 h-14 rounded-full bg-white flex items-center justify-center overflow-hidden">
-                            <img src="https://upload.wikimedia.org/wikipedia/id/thumb/5/50/Lambang_Universitas_Gadjah_Mada.png/300px-Lambang_Universitas_Gadjah_Mada.png" alt="Logo UGM" class="w-10 h-10 object-contain">
-                        </div>
-                        <div class="w-14 h-14 rounded-full bg-white flex items-center justify-center overflow-hidden">
-                            <span class="font-bold text-primary text-sm">DTK</span>
-                        </div>
-                    </div>
+     <div class="border-t border-on-primary/20 mt-12 w-full">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-section-padding py-8">
+
+        <div class="flex flex-col md:flex-row justify-between items-end gap-8">
+
+            <!-- Kiri -->
+            <div class="flex flex-col gap-5">
+                <h4 class="font-headline-md text-headline-md text-on-primary font-bold">
+                    Kerjasama dengan
+                </h4>
+
+                <div class="flex items-center gap-8">
+
+                    <img
+                        src="{{ asset('assets/images/umum/Logo Kab Magelang 2.png') }}"
+                        alt="Kabupaten Magelang"
+                        class="h-16 w-auto object-contain">
+
+                    <img
+                        src="{{ asset('assets/images/umum/android-chrome-512x512 1.png') }}"
+                        alt="UGM"
+                        class="h-16 w-auto object-contain">
+
+                    <img
+                        src="{{ asset('assets/images/umum/Layer 5 1.png') }}"
+                        alt="DTK"
+                        class="h-16 w-auto object-contain">
+
                 </div>
-                <div class="flex flex-col text-center md:text-right text-on-primary/60 text-sm w-full md:w-auto">
-                    <p class="font-bold">WebGIS Pelayanan Desa - Desa Sumberarum © 2024</p>
-                    <p>Pusat Sistem Informasi Geografis</p>
-                </div>
+
+                <p class="text-sm text-on-primary/70">
+                    WebGIS Pelayanan Desa. © Desa Sumberarum 2026
+                </p>
+            </div>
+
+            <!-- Kanan -->
+            <div class="text-sm text-on-primary/70 text-right">
+                Prodi Sistem Informasi Geografis
             </div>
         </div>
+    </div>
+</div>
     </footer>
 @endsection
 
