@@ -32,7 +32,7 @@
 
             <a href="{{ url('/unduh') }}"
                 class="{{ request()->is('unduh') ? 'font-bold text-secondary border-b-2 border-secondary' : 'font-medium hover:text-secondary transition-colors' }} pb-1">
-                Unduh Data
+                Unduh Peta
             </a>
         </nav>
 

@@ -24,7 +24,7 @@
                 <a class="text-primary dark:text-on-primary-fixed font-medium hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300 pb-1"
                     href="#layanan">Layanan Informasi</a>
                 <a class="text-primary dark:text-on-primary-fixed font-medium hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300 pb-1"
-                    href="{{ url('/unduh') }}">Unduh Peta</a>
+                    href="#unduh">Unduh Peta</a>
                 <a class="text-primary dark:text-on-primary-fixed font-medium hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300 pb-1"
                     href="#kontak">Kontak</a>
             </nav>
