@@ -16,6 +16,10 @@ Route::get('/infografis', function () {
     return view('infografis');
 });
 
+Route::get('/layanan-informasi', function () {
+    return view('layananinformasi'); // Memanggil file resources/views/layananinformasi.blade.php
+});
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

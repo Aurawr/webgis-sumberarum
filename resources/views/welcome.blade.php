@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-    <!-- TopNavBar -->
     <header
         class="bg-tertiary-fixed dark:bg-tertiary-container text-primary dark:text-on-primary-fixed docked full-width top-0 sticky backdrop-blur-md bg-opacity-80 dark:bg-opacity-90 shadow-sm z-50">
         <div class="flex justify-between items-center w-full px-margin-mobile md:px-gutter max-w-container-max mx-auto h-20">
@@ -17,12 +16,12 @@
             <nav class="hidden md:flex gap-6">
                 <a class="text-secondary dark:text-secondary-fixed font-bold border-b-2 border-secondary pb-1"
                     href="#profil">Profil Desa</a>
-                <a class="text-primary font-medium hover:text-secondary pb-1"
+                <a class="text-primary dark:text-on-primary-fixed font-medium hover:text-secondary transition-colors duration-300 pb-1"
                     href="{{ url('/infografis') }}">Infografis</a>
                 <a class="text-primary dark:text-on-primary-fixed font-medium hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300 pb-1"
                     href="#peta">Peta Desa</a>
                 <a class="text-primary dark:text-on-primary-fixed font-medium hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300 pb-1"
-                    href="#layanan">Layanan Informasi</a>
+                    href="{{ url('/layanan-informasi') }}">Layanan Informasi</a>
                 <a class="text-primary dark:text-on-primary-fixed font-medium hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300 pb-1"
                     href="#unduh">Unduh Data</a>
                 <a class="text-primary dark:text-on-primary-fixed font-medium hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300 pb-1"
@@ -34,7 +33,6 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="relative h-[819px] w-full flex items-center justify-center">
         <div class="absolute inset-0 z-0">
             <div class="bg-cover bg-center w-full h-full"
@@ -45,15 +43,14 @@
         <div class="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center gap-6">
             <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-tertiary-fixed drop-shadow-lg">Desa
                 Sumberarum</h1>
-            <button
+            <a href="#profil"
                 class="bg-tertiary-fixed text-on-tertiary-fixed px-8 py-3 rounded-full font-label-lg text-label-lg flex items-center gap-2 hover:bg-white transition-all shadow-lg">
                 Jelajahi Desa
                 <span class="material-symbols-outlined">expand_more</span>
-            </button>
+            </a>
         </div>
     </section>
 
-    <!-- Profil Desa Section -->
     <section class="bg-primary-container text-on-primary py-section-padding px-margin-mobile md:px-gutter" id="profil">
         <div class="max-w-container-max mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
@@ -69,7 +66,7 @@
                     <div
                         class="relative w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-tertiary-fixed overflow-hidden shadow-2xl">
                         <img class="w-full h-full object-cover"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ9MHOhNPfG1Sxi-y4qBG11GZN4d9GTt4z6MbbntXR9_KfrdAzIxi8ouv9v1PuudxQ5-s8i0tki-5FEQJaDWfWxYPt0SLDM25NIdMIsGaN__JiIStnbI3QK70X7MQkxEXxQVpI7HwLEhF6tk2LC4ja1TrIuPWpmIoF2neKoYAXQh5ZrCNyK5bFQ4kszUC0id1iFn0PtC-DhiFbBscHgdY3mDAuHDEwxtljdWENh0mqxZ-KBBjBm3VyIRkjtLTPmurQ_Kvhrk1YglDs" />
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ9MHOhNPfG1Sxi-y4qBG11GZN4d9GTt4z6MbbntXR9_KfrdAzIxi8ouv9v1PuudxQ5-s8i0tki-5FEQJaDWfWxYPt0SLDM25NIdMIsGaN__JiIStnbI3QK70X7MQkxEXxQVpI7HwLEhF6tk2LC4ja1TrIuPWpmIoF2neKoYAXQh5ZrCNyK5bFQ4kszUC0id1iFn0PtC-DhiFbBscHgdY3mDAuHDEwxtljdWENh0mqxZ-KBBjBm3VyIRkjtLTPmurQ_Kvhrk1YglDs" alt="Foto Kepala Desa" />
                     </div>
                     <div
                         class="bg-surface/10 backdrop-blur-md border border-white/20 mt-6 px-6 py-3 rounded-xl text-center">
@@ -81,7 +78,6 @@
         </div>
     </section>
 
-    <!-- Peta Wilayah Section -->
     <section class="bg-primary text-on-primary py-section-padding px-margin-mobile md:px-gutter overflow-hidden"
         id="peta">
         <div class="max-w-container-max mx-auto">
@@ -94,16 +90,14 @@
                 </div>
 
                 <div class="md:col-span-8 relative rounded-3xl overflow-hidden min-h-[450px] shadow-2xl">
-                    <!-- Wadah Peta Interaktif -->
                     <div id="map" class="w-full h-full min-h-[450px] z-0"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer
-        class="bg-primary dark:bg-primary-container text-on-primary dark:text-on-primary-container full-width rounded-t-lg relative mt-24">
+        class="bg-primary dark:bg-primary-container text-on-primary dark:text-on-primary-container full-width rounded-t-lg relative mt-24" id="kontak">
         <div
             class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-section-padding py-section-padding max-w-container-max mx-auto relative z-10">
             <div class="flex flex-col gap-6">
