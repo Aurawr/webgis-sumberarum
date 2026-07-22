@@ -23,6 +23,10 @@ Route::get('/layanan-informasi', function () {
     return view('layananinformasi'); // Memanggil file resources/views/layananinformasi.blade.php
 });
 
+Route::get('/petadesa', function () {
+    return view('petadesa'); // Sesuaikan dengan nama file blade peta Anda
+});
+
 
 
 Route::middleware('auth')->group(function () {
