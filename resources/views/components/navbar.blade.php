@@ -26,7 +26,7 @@
                 Peta Desa
             </a>
 
-            <a href="{{ url('/#layanan') }}" class="font-medium hover:text-secondary transition-colors pb-1">
+            <a href="{{ url('/layanan-informasi') }}" class="font-medium hover:text-secondary transition-colors pb-1">
                 Layanan Informasi
             </a>
 
