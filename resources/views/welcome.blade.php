@@ -24,7 +24,7 @@
                 <a class="text-primary dark:text-on-primary-fixed font-medium hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300 pb-1"
                     href="#layanan">Layanan Informasi</a>
                 <a class="text-primary dark:text-on-primary-fixed font-medium hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300 pb-1"
-                    href="#unduh">Unduh Data</a>
+                    href="{{ url('/unduh') }}">Unduh Peta</a>
                 <a class="text-primary dark:text-on-primary-fixed font-medium hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300 pb-1"
                     href="#kontak">Kontak</a>
             </nav>
@@ -97,7 +97,7 @@ Ut in lorem vel felis rhoncus egestas. Duis porta dolor ut convallis consectetur
 <section class="bg-primary-container text-on-primary relative w-full h-[300vh]" id="destinasi-wrapper">
     <!-- Pinned Container -->
     <div class="sticky top-0 h-screen w-full overflow-hidden flex flex-col pt-20 pb-10" id="destinasi-pinned">
-        
+
         <!-- Header Section -->
         <div class="px-margin-mobile md:px-gutter max-w-container-max mx-auto w-full z-50 absolute top-24 left-1/2 -translate-x-1/2 text-center md:text-left pointer-events-none">
             <h2 class="font-headline-xl text-headline-xl text-tertiary-fixed font-bold pointer-events-auto drop-shadow-md">Destinasi Wisata</h2>
@@ -129,7 +129,7 @@ Ut in lorem vel felis rhoncus egestas. Duis porta dolor ut convallis consectetur
             </div>
             @endfor
         </div>
-        
+
         <!-- Progress Indicators -->
         <div class="absolute right-6 top-1/2 -translate-y-1/2 flex flex-col gap-4 z-50">
             @for ($i = 1; $i <= 3; $i++)
@@ -258,7 +258,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor i
                 gsap.set(cards[0], { opacity: 1, scale: 1, x: 0, y: 0, filter: "blur(0px)", zIndex: 30 });
                 gsap.set(cards[1], { opacity: 0.4, scale: 0.85, x: getOffset(), y: 0, filter: "blur(5px)", zIndex: 20 });
                 gsap.set(cards[2], { opacity: 0.15, scale: 0.7, x: getOffset() * 2, y: 0, filter: "blur(10px)", zIndex: 10 });
-                
+
                 gsap.set(dots[0], { backgroundColor: "#FFF9E6", scale: 1.3 });
                 gsap.set([dots[1], dots[2]], { backgroundColor: "rgba(255, 249, 230, 0.3)", scale: 1 });
 
@@ -276,7 +276,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor i
                 tl.to(cards[0], { opacity: 0.4, scale: 0.85, x: () => -getOffset(), filter: "blur(5px)", duration: 1, ease: "power1.inOut" }, 0);
                 tl.to(cards[1], { opacity: 1, scale: 1, x: 0, filter: "blur(0px)", duration: 1, ease: "power1.inOut" }, 0);
                 tl.to(cards[2], { opacity: 0.4, scale: 0.85, x: () => getOffset(), filter: "blur(5px)", duration: 1, ease: "power1.inOut" }, 0);
-                
+
                 tl.to(dots[0], { backgroundColor: "rgba(255, 249, 230, 0.3)", scale: 1, duration: 0.5 }, 0.25);
                 tl.to(dots[1], { backgroundColor: "#FFF9E6", scale: 1.3, duration: 0.5 }, 0.25);
 
@@ -288,10 +288,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor i
                 tl.to(cards[0], { opacity: 0.15, scale: 0.7, x: () => -getOffset() * 2, filter: "blur(10px)", duration: 1, ease: "power1.inOut" }, t2Start);
                 tl.to(cards[1], { opacity: 0.4, scale: 0.85, x: () => -getOffset(), filter: "blur(5px)", duration: 1, ease: "power1.inOut" }, t2Start);
                 tl.to(cards[2], { opacity: 1, scale: 1, x: 0, filter: "blur(0px)", duration: 1, ease: "power1.inOut" }, t2Start);
-                
+
                 tl.to(dots[1], { backgroundColor: "rgba(255, 249, 230, 0.3)", scale: 1, duration: 0.5 }, t2Start + 0.25);
                 tl.to(dots[2], { backgroundColor: "#FFF9E6", scale: 1.3, duration: 0.5 }, t2Start + 0.25);
-                
+
                 // --- Hold state at the end ---
                 tl.to({}, {duration: 0.3});
             }

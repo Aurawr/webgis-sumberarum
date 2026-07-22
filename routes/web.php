@@ -15,7 +15,9 @@ Route::get('/dashboard', function () {
 Route::get('/infografis', function () {
     return view('infografis');
 });
-
+Route::get('/unduh', function () {
+    return view('unduh');
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
