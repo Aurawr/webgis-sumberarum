@@ -1,37 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <header
-        class="bg-tertiary-fixed dark:bg-tertiary-container text-primary dark:text-on-primary-fixed docked full-width top-0 sticky backdrop-blur-md bg-opacity-80 dark:bg-opacity-90 shadow-sm z-50">
-        <div class="flex justify-between items-center w-full px-margin-mobile md:px-gutter max-w-container-max mx-auto h-20">
-            <div class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-primary text-3xl">map</span>
-                <div class="flex flex-col">
-                    <span
-                        class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary dark:text-on-primary-fixed leading-tight text-[20px] md:text-[24px]">Desa
-                        Sumberarum</span>
-                    <span class="font-label-lg text-label-lg text-primary/70 text-[12px]">Kabupaten Magelang</span>
-                </div>
-            </div>
-            <nav class="hidden md:flex gap-6">
-                <a class="text-secondary dark:text-secondary-fixed font-bold border-b-2 border-secondary pb-1"
-                    href="#profil">Profil Desa</a>
-                <a class="text-primary font-medium hover:text-secondary pb-1"
-                    href="{{ url('/infografis') }}">Infografis</a>
-                <a class="text-primary dark:text-on-primary-fixed font-medium hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300 pb-1"
-                    href="{{ url('/petadesa') }}">Peta Desa</a>
-                <a class="text-primary dark:text-on-primary-fixed font-medium hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300 pb-1"
-                    href="{{ url('/layanan-informasi') }}">Layanan Informasi</a>
-                <a class="text-primary dark:text-on-primary-fixed font-medium hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300 pb-1"
-                    href="#unduh">Unduh Peta</a>
-                <a class="text-primary dark:text-on-primary-fixed font-medium hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300 pb-1"
-                    href="#kontak">Kontak</a>
-            </nav>
-            <button class="md:hidden text-primary">
-                <span class="material-symbols-outlined text-3xl">menu</span>
-            </button>
-        </div>
-    </header>
+<x-navbar />
 
     <section class="relative h-[819px] w-full flex items-center justify-center">
         <div class="absolute inset-0 z-0">
