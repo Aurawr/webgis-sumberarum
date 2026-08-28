@@ -1,0 +1,40 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('bangunan', function (Blueprint $table) {
+            $table->id();
+            $table->string('nama_dusun')->nullable();
+            $table->string('desa')->nullable();
+            $table->string('kecamatan')->nullable();
+            $table->string('rt', 254)->nullable();
+            $table->float('rw')->nullable();
+            $table->string('fungsi')->nullable();
+            $table->string('jenis')->nullable();
+            $table->string('material')->nullable();
+            $table->string('atap')->nullable();
+            $table->unsignedInteger('jumlah_lantai')->nullable();
+            $table->string('jenis_lantai')->nullable();
+            $table->text('keterangan')->nullable();
+            $table->geometry('geom', 'multipolygon', 4326)->nullable();
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('bangunan');
+    }
+};

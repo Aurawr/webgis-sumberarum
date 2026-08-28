@@ -3,7 +3,7 @@
 
         <!-- Logo dibuat bisa diklik untuk kembali ke Beranda -->
         <a href="{{ url('/') }}" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <span class="material-symbols-outlined text-3xl">map</span>
+            <img src="{{ asset('assets/images/umum/Logo Kab Magelang 2.png') }}" alt="Logo Kab Magelang" class="w-10 h-10 object-contain" />
             <div class="flex flex-col">
                 <span class="font-bold text-xl leading-tight">Desa Sumberarum</span>
                 <span class="text-xs opacity-70">Kabupaten Magelang</span>
@@ -22,11 +22,13 @@
                 Infografis
             </a>
 
-            <a href="{{ url('/#peta') }}" class="font-medium hover:text-secondary transition-colors pb-1">
+            <a href="{{ url('/petadesa') }}"
+                class="{{ request()->is('petadesa') ? 'font-bold text-secondary border-b-2 border-secondary' : 'font-medium hover:text-secondary transition-colors' }} pb-1">
                 Peta Desa
             </a>
 
-            <a href="{{ url('/layanan-informasi') }}" class="font-medium hover:text-secondary transition-colors pb-1">
+            <a href="{{ url('/layanan-informasi') }}"
+                class="{{ request()->is('layanan-informasi') ? 'font-bold text-secondary border-b-2 border-secondary' : 'font-medium hover:text-secondary transition-colors' }} pb-1">
                 Layanan Informasi
             </a>
 

@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<<<<<<< HEAD
     <header
         class="fixed top-0 left-0 right-0 z-50 pt-4 px-6 md:px-12 lg:px-16"
         id="main-header">
@@ -91,6 +92,9 @@
             </nav>
         </div>
     </header>
+=======
+<x-navbar />
+>>>>>>> 96f0b7d0f785ead9ac435eed0dd3c9401d568a1a
 
     <section class="relative h-[819px] w-full flex items-center justify-center">
         <div class="absolute inset-0 z-0">
@@ -137,6 +141,25 @@
         </div>
     </section>
 
+    <section class="bg-primary text-on-primary py-16 px-margin-mobile md:px-gutter">
+        <div class="max-w-container-max mx-auto bg-white/5 border border-white/10 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 backdrop-blur-sm">
+            <div class="flex flex-col gap-3 max-w-2xl">
+                <div class="flex items-center gap-2 text-tertiary-fixed font-bold">
+                    <span class="material-symbols-outlined">map</span>
+                    <span class="uppercase tracking-wider text-sm">WebGIS Desa</span>
+                </div>
+                <h2 class="font-headline-xl text-headline-xl text-tertiary-fixed font-bold">Peta Spasial Desa Sumberarum</h2>
+                <p class="font-body-lg text-on-primary/80">
+                    Jelajahi pemetaan batas wilayah, fasilitas umum, serta objek penting desa secara interaktif melalui halaman peta khusus kami.
+                </p>
+            </div>
+            <a href="{{ url('/petadesa') }}" class="bg-tertiary-fixed text-on-tertiary-fixed px-8 py-4 rounded-full font-label-lg font-bold flex items-center gap-3 hover:bg-white transition-all shadow-lg shrink-0">
+                <span>Buka Peta Interaktif</span>
+                <span class="material-symbols-outlined">arrow_forward</span>
+            </a>
+        </div>
+    </section>
+
     <section class="bg-primary text-on-primary py-section-padding px-margin-mobile md:px-gutter" id="sejarah">
         <div class="max-w-3xl mx-auto flex flex-col gap-6">
             <h2 class="font-headline-xl text-headline-xl text-tertiary-fixed text-left font-bold">Sejarah Desa</h2>
@@ -164,7 +187,7 @@
                             <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" />
                         </svg>
                         <svg class="sparkle absolute -bottom-8 -left-8 w-16 h-16 text-[#FFF9E6] z-30 drop-shadow-lg" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 9.41L12 0Z" />
+                            <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" />
                         </svg>
 
                         <div class="rounded-xl overflow-hidden h-[280px] md:h-[320px] w-full shrink-0 shadow-inner relative bg-black/10">
@@ -187,22 +210,6 @@
         </div>
     </section>
 
-    <section class="bg-primary text-on-primary py-section-padding px-margin-mobile md:px-gutter overflow-hidden" id="peta">
-        <div class="max-w-container-max mx-auto">
-            <h2 class="font-headline-xl text-headline-xl text-tertiary-fixed mb-12">Peta Wilayah Interaktif</h2>
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-stretch">
-                <div class="md:col-span-4 bg-surface-container rounded-3xl p-6 flex flex-col gap-6 text-on-surface">
-                    <h3 class="font-headline-lg text-headline-lg text-primary">Informasi Peta</h3>
-                    <p class="font-body-md text-on-surface-variant">Peta ini menampilkan lokasi objek dan fasilitas umum yang ada di wilayah Desa Sumberarum.</p>
-                </div>
-
-                <div class="md:col-span-8 relative rounded-3xl overflow-hidden min-h-[450px] shadow-2xl">
-                    <div id="map" class="w-full h-full min-h-[450px] z-0"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <footer class="bg-primary dark:bg-primary-container text-on-primary dark:text-on-primary-container full-width rounded-t-lg relative mt-24">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-section-padding py-section-padding max-w-container-max mx-auto relative z-10">
             <div class="flex flex-col gap-6">
@@ -218,55 +225,39 @@
             </div>
         </div>
 
-     <div class="border-t border-on-primary/20 mt-12 w-full">
-        <div class="max-w-container-max mx-auto px-margin-mobile md:px-section-padding py-8">
+        <div class="border-t border-on-primary/20 mt-12 w-full">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-section-padding py-8">
+                <div class="flex flex-col md:flex-row justify-between items-end gap-8">
+                    <div class="flex flex-col gap-5">
+                        <h4 class="font-headline-md text-headline-md text-on-primary font-bold">
+                            Kerjasama dengan
+                        </h4>
+                        <div class="flex items-center gap-8">
+                            <img src="{{ asset('assets/images/umum/Logo Kab Magelang 2.png') }}"
+                                alt="Kabupaten Magelang" class="h-16 w-auto object-contain">
+                            <img src="{{ asset('assets/images/umum/android-chrome-512x512 1.png') }}"
+                                alt="UGM" class="h-16 w-auto object-contain">
+                            <img src="{{ asset('assets/images/umum/Layer 5 1.png') }}"
+                                alt="DTK" class="h-16 w-auto object-contain">
+                        </div>
+                        <p class="text-sm text-on-primary/70">
+                            WebGIS Pelayanan Desa. © Desa Sumberarum 2026
+                        </p>
+                    </div>
 
-        <div class="flex flex-col md:flex-row justify-between items-end gap-8">
-
-            <!-- Kiri -->
-            <div class="flex flex-col gap-5">
-                <h4 class="font-headline-md text-headline-md text-on-primary font-bold">
-                    Kerjasama dengan
-                </h4>
-
-                <div class="flex items-center gap-8">
-
-                    <img
-                        src="{{ asset('assets/images/umum/Logo Kab Magelang 2.png') }}"
-                        alt="Kabupaten Magelang"
-                        class="h-16 w-auto object-contain">
-
-                    <img
-                        src="{{ asset('assets/images/umum/android-chrome-512x512 1.png') }}"
-                        alt="UGM"
-                        class="h-16 w-auto object-contain">
-
-                    <img
-                        src="{{ asset('assets/images/umum/Layer 5 1.png') }}"
-                        alt="DTK"
-                        class="h-16 w-auto object-contain">
-
+                    <div class="text-sm text-on-primary/70 text-right">
+                        Prodi Sistem Informasi Geografis
+                    </div>
                 </div>
-
-                <p class="text-sm text-on-primary/70">
-                    WebGIS Pelayanan Desa. © Desa Sumberarum 2026
-                </p>
-            </div>
-
-            <!-- Kanan -->
-            <div class="text-sm text-on-primary/70 text-right">
-                Prodi Sistem Informasi Geografis
             </div>
         </div>
-    </div>
-</div>
     </footer>
 @endsection
 
 @push('scripts')
     <script>
-        // Inisialisasi Peta Leaflet sederhana
         document.addEventListener('DOMContentLoaded', function() {
+<<<<<<< HEAD
             // Navbar Scroll Effect - Glassmorphism Transition
             const navbarBg = document.getElementById('navbar-bg');
             let lastScrollTop = 0;
@@ -386,6 +377,8 @@
                 .bindPopup('<b>Desa Sumberarum</b><br>Pusat Pemerintahan Desa.')
                 .openPopup();
 
+=======
+>>>>>>> 96f0b7d0f785ead9ac435eed0dd3c9401d568a1a
             // GSAP ScrollTrigger for Destinasi Wisata 3D Stack
             if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
                 gsap.registerPlugin(ScrollTrigger);
@@ -397,7 +390,6 @@
                 gsap.set(cards, { xPercent: -50, yPercent: -50, transformOrigin: "center center" });
 
                 if (cards.length === 3) {
-                    // Determine offset based on screen size
                     const getOffset = () => window.innerWidth > 768 ? 450 : 310;
 
                     // Initial State
@@ -413,7 +405,7 @@
                             trigger: "#destinasi-wrapper",
                             start: "top top",
                             end: "bottom bottom",
-                            scrub: 1, // Smooth scrubbing
+                            scrub: 1,
                             invalidateOnRefresh: true
                         }
                     });
@@ -426,7 +418,6 @@
                     tl.to(dots[0], { backgroundColor: "rgba(255, 249, 230, 0.3)", scale: 1, duration: 0.5 }, 0.25);
                     tl.to(dots[1], { backgroundColor: "#FFF9E6", scale: 1.3, duration: 0.5 }, 0.25);
 
-                    // --- Hold state for a brief moment ---
                     tl.to({}, {duration: 0.3});
 
                     // --- Transition 2: Card 2 moves left, Card 3 moves to center ---
@@ -438,7 +429,6 @@
                     tl.to(dots[1], { backgroundColor: "rgba(255, 249, 230, 0.3)", scale: 1, duration: 0.5 }, t2Start + 0.25);
                     tl.to(dots[2], { backgroundColor: "#FFF9E6", scale: 1.3, duration: 0.5 }, t2Start + 0.25);
 
-                    // --- Hold state at the end ---
                     tl.to({}, {duration: 0.3});
                 }
             }

@@ -46,7 +46,7 @@
         <!-- Header -->
         <div class="mb-12">
             <h1 class="text-5xl md:text-6xl font-extrabold text-tertiary-fixed border-b-4 border-tertiary-fixed inline-block pb-3 mb-4">
-                Unduh Data
+                Unduh Peta
             </h1>
             <p class="text-lg text-tertiary-fixed/80">Koleksi peta tematik dan dokumen yang dapat Anda lihat serta unduh.</p>
         </div>
