@@ -117,35 +117,35 @@
         </div>
     </section>
 
-    <footer class="bg-primary dark:bg-primary-container text-on-primary dark:text-on-primary-container full-width rounded-t-lg relative mt-24">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-section-padding py-section-padding max-w-container-max mx-auto relative z-10">
-            <div class="flex flex-col gap-6">
-                <h3 class="font-headline-xl text-headline-xl text-on-primary dark:text-on-primary-container font-extrabold mb-4">Desa<br/>Sumberarum</h3>
-            </div>
+    <footer class="bg-primary dark:bg-primary-container text-on-primary dark:text-on-primary-container rounded-t-lg relative mt-24">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-6 md:px-10 py-10 max-w-4xl mx-auto relative z-10">
             <div class="flex flex-col gap-4">
-                <h4 class="font-headline-lg text-headline-lg text-tertiary-fixed dark:text-tertiary-fixed-dim mb-2">Tautan Penting</h4>
+                <h3 class="font-headline-xl text-headline-xl text-on-primary dark:text-on-primary-container font-extrabold mb-2">Desa<br/>Sumberarum</h3>
+            </div>
+            <div class="flex flex-col gap-3">
+                <h4 class="font-headline-lg text-headline-lg text-tertiary-fixed dark:text-tertiary-fixed-dim mb-1">Tautan Penting</h4>
                 <a class="font-body-md text-body-md text-on-primary/80 dark:text-on-primary-container/80 hover:text-secondary-fixed transition-all" href="#">Website Kabupaten Magelang</a>
             </div>
-            <div class="flex flex-col gap-4">
-                <h4 class="font-headline-lg text-headline-lg text-tertiary-fixed dark:text-tertiary-fixed-dim mb-2">Sosial Media</h4>
+            <div class="flex flex-col gap-3">
+                <h4 class="font-headline-lg text-headline-lg text-tertiary-fixed dark:text-tertiary-fixed-dim mb-1">Sosial Media</h4>
                 <a class="font-body-md text-body-md text-on-primary/80 dark:text-on-primary-container/80 hover:text-secondary-fixed transition-all" href="#">Instagram</a>
             </div>
         </div>
 
-        <div class="border-t border-on-primary/20 mt-12 w-full">
-            <div class="max-w-container-max mx-auto px-margin-mobile md:px-section-padding py-8">
-                <div class="flex flex-col md:flex-row justify-between items-end gap-8">
-                    <div class="flex flex-col gap-5">
+        <div class="border-t border-on-primary/20 mt-2 w-full">
+            <div class="max-w-4xl mx-auto px-6 md:px-10 py-6">
+                <div class="flex flex-col md:flex-row justify-between items-end gap-6">
+                    <div class="flex flex-col gap-4">
                         <h4 class="font-headline-md text-headline-md text-on-primary font-bold">
                             Kerjasama dengan
                         </h4>
-                        <div class="flex items-center gap-8">
+                        <div class="flex items-center gap-6">
                             <img src="{{ asset('assets/images/umum/Logo Kab Magelang 2.png') }}"
-                                alt="Kabupaten Magelang" class="h-16 w-auto object-contain">
+                                alt="Kabupaten Magelang" class="h-12 w-auto object-contain">
                             <img src="{{ asset('assets/images/umum/android-chrome-512x512 1.png') }}"
-                                alt="UGM" class="h-16 w-auto object-contain">
+                                alt="UGM" class="h-12 w-auto object-contain">
                             <img src="{{ asset('assets/images/umum/Layer 5 1.png') }}"
-                                alt="DTK" class="h-16 w-auto object-contain">
+                                alt="DTK" class="h-12 w-auto object-contain">
                         </div>
                         <p class="text-sm text-on-primary/70">
                             WebGIS Pelayanan Desa. © Desa Sumberarum 2026
