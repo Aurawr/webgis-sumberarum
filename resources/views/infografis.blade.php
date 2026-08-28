@@ -18,7 +18,7 @@
             'wisata' => 5,
             'sarpras' => [
                 'pendidikan' => 18,
-                'industri' => 0,
+                'industri' => 10,
                 'ibadah' => 26,
                 'olahraga' => 3,
             ],
@@ -184,7 +184,7 @@
                         <div class="group">
                             <div class="flex justify-between text-body-md mb-2">
                                 <span class="font-bold text-on-surface flex items-center gap-2"><span
-                                        class="w-3 h-3 rounded-full bg-outline"></span> Fasilitas Umum & Lainnya</span>
+                                        class="w-3 h-3 rounded-full bg-outline"></span> Lainnya</span>
                                 <span class="font-bold text-primary">{{ $data['lahan']['fasilitas'] }}%</span>
                             </div>
                             <div class="w-full bg-surface-container-highest rounded-full h-4 overflow-hidden shadow-inner">
