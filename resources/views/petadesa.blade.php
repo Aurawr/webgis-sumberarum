@@ -3,7 +3,7 @@
 @section('content')
 <x-navbar />
 
-    <main class="bg-primary text-on-primary py-12 px-margin-mobile md:px-gutter min-h-screen">
+    <main class="bg-primary text-on-primary pt-28 pb-12 md:pt-36 md:pb-16 px-margin-mobile md:px-gutter min-h-screen">
         <div class="max-w-container-max mx-auto">
             <div class="mb-8">
                 <h1 class="font-headline-xl text-headline-xl text-tertiary-fixed font-bold mb-2">Peta Wilayah Interaktif</h1>
