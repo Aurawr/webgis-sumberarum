@@ -7,12 +7,10 @@ use Illuminate\Support\Facades\DB;
 
 class BangunanController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
         $data = DB::table('bangunan')
+            ->whereNotNull('geom')
             ->select(
                 'id',
                 'nama_dusun',
@@ -27,7 +25,12 @@ class BangunanController extends Controller
                 'jumlah_lantai',
                 'jenis_lantai',
                 'keterangan',
-                DB::raw('ST_AsGeoJSON(geom) as geom')
+                DB::raw('ST_AsGeoJSON(
+                    CASE
+                        WHEN ST_X(ST_Centroid(geom)) > 180 THEN ST_Transform(ST_SetSRID(geom, 32749), 4326)
+                        ELSE ST_SetSRID(geom, 4326)
+                    END
+                ) as geom')
             )
             ->get();
 
@@ -57,53 +60,5 @@ class BangunanController extends Controller
             'type' => 'FeatureCollection',
             'features' => $features,
         ]);
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
     }
 }

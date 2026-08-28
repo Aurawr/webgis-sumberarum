@@ -9,10 +9,10 @@
             'luas_wilayah' => 445.565,
             'administrasi' => ['rt' => 57, 'rw' => 17, 'dusun' => 15],
             'lahan' => [
-                'pertanian' => 55,
-                'pemukiman' => 25,
-                'hutan' => 15,
-                'fasilitas' => 5,
+                'pertanian' => 20.26,
+                'pemukiman' => 8.73,
+                'hutan' => 33.87,
+                'fasilitas' => 37.14,
             ],
             'infrastruktur' => 2078,
             'wisata' => 5,
@@ -172,7 +172,7 @@
                         <div class="group">
                             <div class="flex justify-between text-body-md mb-2">
                                 <span class="font-bold text-on-surface flex items-center gap-2"><span
-                                        class="w-3 h-3 rounded-full bg-primary-container"></span> Hutan & Perkebunan</span>
+                                        class="w-3 h-3 rounded-full bg-primary-container"></span> Hutan</span>
                                 <span class="font-bold text-primary">{{ $data['lahan']['hutan'] }}%</span>
                             </div>
                             <div class="w-full bg-surface-container-highest rounded-full h-4 overflow-hidden shadow-inner">
