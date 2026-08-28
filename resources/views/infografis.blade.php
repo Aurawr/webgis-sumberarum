@@ -14,12 +14,12 @@
                 'hutan' => 15,
                 'fasilitas' => 5,
             ],
-            'infrastruktur' => 840,
+            'infrastruktur' => 2078,
             'wisata' => 5,
             'sarpras' => [
-                'pendidikan' => 4,
-                'kesehatan' => 2,
-                'ibadah' => 8,
+                'pendidikan' => 18,
+                'industri' => 0,
+                'ibadah' => 26,
                 'olahraga' => 3,
             ],
         ];
@@ -243,7 +243,7 @@
                             @php
                                 $ikonSarpras = [
                                     'pendidikan' => 'school',
-                                    'kesehatan' => 'local_hospital',
+                                    'industri' => 'factory',
                                     'ibadah' => 'mosque',
                                     'olahraga' => 'sports_soccer',
                                 ];

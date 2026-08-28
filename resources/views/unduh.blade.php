@@ -40,8 +40,8 @@
 @endphp
 
 <!-- Wrapper dengan warna hijau tua (primary) -->
-<section class="bg-primary min-h-screen py-16 px-6">
-    <div class="max-w-7xl mx-auto">
+<section class="bg-primary min-h-screen pt-28 pb-16 md:pt-36 md:pb-20 px-margin-mobile md:px-gutter">
+    <div class="max-w-container-max mx-auto">
 
         <!-- Header -->
         <div class="mb-12">
