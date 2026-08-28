@@ -72,6 +72,10 @@
                 layers: [osm]
             })
 
+            // Membuat pane khusus agar layer titik selalu tampil di atas layer polygon
+            map.createPane('pointsPane')
+            map.getPane('pointsPane').style.zIndex = 650
+
             var layerBatasAdmin = L.layerGroup().addTo(map)
             var layerPertanian = L.layerGroup().addTo(map)
             var layerPL = L.layerGroup().addTo(map)
@@ -143,8 +147,7 @@
 
             loadLayer('/pertanian', layerPertanian, {
                 filter: function(feature) {
-                    return feature.geometry && feature.geometry.coordinates && feature.geometry
-                        .coordinates.length > 0
+                    return feature.geometry && feature.geometry.coordinates
                 },
                 style: function(feature) {
                     return {
@@ -174,8 +177,7 @@
 
             loadLayer('/pl', layerPL, {
                 filter: function(feature) {
-                    return feature.geometry && feature.geometry.coordinates && feature.geometry
-                        .coordinates.length > 0
+                    return feature.geometry && feature.geometry.coordinates
                 },
                 style: {
                     color: '#0369a1',
@@ -202,11 +204,11 @@
 
             loadLayer('/bangunan', layerBangunan, {
                 filter: function(feature) {
-                    return feature.geometry && feature.geometry.coordinates && feature.geometry
-                        .coordinates.length > 0
+                    return feature.geometry && feature.geometry.coordinates
                 },
                 pointToLayer: function(feature, latlng) {
                     return L.circleMarker(latlng, {
+                        pane: 'pointsPane',
                         radius: 4,
                         fillColor: '#ef4444',
                         color: '#b91c1c',
@@ -214,15 +216,6 @@
                         opacity: 1,
                         fillOpacity: 0.8
                     })
-                },
-                style: function(feature) {
-                    return {
-                        color: '#b91c1c',
-                        weight: 1.5,
-                        opacity: 0.8,
-                        fillColor: '#ef4444',
-                        fillOpacity: 0.4
-                    }
                 },
                 onEachFeature: function(feature, layer) {
                     if (feature && feature.properties) {
@@ -247,11 +240,11 @@
 
             loadLayer('/sarpras', layerSarpras, {
                 filter: function(feature) {
-                    return feature.geometry && feature.geometry.coordinates && feature.geometry
-                        .coordinates.length > 0
+                    return feature.geometry && feature.geometry.coordinates
                 },
                 pointToLayer: function(feature, latlng) {
                     return L.circleMarker(latlng, {
+                        pane: 'pointsPane',
                         radius: 6,
                         fillColor: '#a855f7',
                         color: '#6b21a8',
@@ -274,8 +267,12 @@
             })
 
             loadLayer('/wisata', layerWisata, {
+                filter: function(feature) {
+                    return feature.geometry && feature.geometry.coordinates
+                },
                 pointToLayer: function(feature, latlng) {
                     return L.circleMarker(latlng, {
+                        pane: 'pointsPane',
                         radius: 7,
                         fillColor: '#f97316',
                         color: '#c2410c',
