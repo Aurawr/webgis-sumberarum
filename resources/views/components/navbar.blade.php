@@ -18,51 +18,31 @@
                 <a href="{{ url('/') }}"
                     class="nav-link relative px-4 py-2 text-[15px] {{ request()->is('/') ? 'font-semibold' : 'font-medium' }} transition-all duration-500 group">
                     <span class="relative z-10 drop-shadow-md">Beranda</span>
-                    @if(request()->is('/'))
-                        <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-12 h-0.5 rounded-full nav-underline"></span>
-                    @else
-                        <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 rounded-full group-hover:w-12 transition-all duration-300 nav-underline"></span>
-                    @endif
+                    <span class="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 rounded-full transition-all duration-300 nav-underline {{ request()->is('/') ? 'w-12' : 'w-0 group-hover:w-12' }}"></span>
                 </a>
 
                 <a href="{{ url('/infografis') }}"
                     class="nav-link relative px-4 py-2 text-[15px] {{ request()->is('infografis') ? 'font-semibold' : 'font-medium' }} transition-all duration-500 group">
                     <span class="relative z-10 drop-shadow-md">Infografis</span>
-                    @if(request()->is('infografis'))
-                        <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-12 h-0.5 rounded-full nav-underline"></span>
-                    @else
-                        <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 rounded-full group-hover:w-12 transition-all duration-300 nav-underline"></span>
-                    @endif
+                    <span class="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 rounded-full transition-all duration-300 nav-underline {{ request()->is('infografis') ? 'w-12' : 'w-0 group-hover:w-12' }}"></span>
                 </a>
 
                 <a href="{{ url('/petadesa') }}"
                     class="nav-link relative px-4 py-2 text-[15px] {{ request()->is('petadesa') ? 'font-semibold' : 'font-medium' }} transition-all duration-500 group">
                     <span class="relative z-10 drop-shadow-md">Peta Desa</span>
-                    @if(request()->is('petadesa'))
-                        <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-12 h-0.5 rounded-full nav-underline"></span>
-                    @else
-                        <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 rounded-full group-hover:w-12 transition-all duration-300 nav-underline"></span>
-                    @endif
+                    <span class="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 rounded-full transition-all duration-300 nav-underline {{ request()->is('petadesa') ? 'w-12' : 'w-0 group-hover:w-12' }}"></span>
                 </a>
 
                 <a href="{{ url('/layanan-informasi') }}"
                     class="nav-link relative px-4 py-2 text-[15px] {{ request()->is('layanan-informasi') ? 'font-semibold' : 'font-medium' }} transition-all duration-500 group">
                     <span class="relative z-10 drop-shadow-md">Layanan Informasi</span>
-                    @if(request()->is('layanan-informasi'))
-                        <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-12 h-0.5 rounded-full nav-underline"></span>
-                    @else
-                        <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 rounded-full group-hover:w-12 transition-all duration-300 nav-underline"></span>
-                    @endif
+                    <span class="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 rounded-full transition-all duration-300 nav-underline {{ request()->is('layanan-informasi') ? 'w-12' : 'w-0 group-hover:w-12' }}"></span>
                 </a>
 
                 <a href="{{ url('/unduh') }}"
                     class="nav-link relative px-4 py-2 text-[15px] {{ request()->is('unduh') ? 'font-semibold' : 'font-medium' }} transition-all duration-500 group">
                     <span class="relative z-10 drop-shadow-md">Unduh Peta</span>
-                    @if(request()->is('unduh'))
-                        <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-12 h-0.5 rounded-full nav-underline"></span>
-                    @else
-                        <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 rounded-full group-hover:w-12 transition-all duration-300 nav-underline"></span>
-                    @endif
+                    <span class="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 rounded-full transition-all duration-300 nav-underline {{ request()->is('unduh') ? 'w-12' : 'w-0 group-hover:w-12' }}"></span>
                 </a>
             </nav>
 
@@ -79,26 +59,11 @@
     <div class="lg:hidden fixed inset-0 top-20 bg-white/95 dark:bg-gray-900/95 backdrop-blur-2xl transform -translate-x-full transition-transform duration-300 ease-in-out z-40 border-t border-white/20 dark:border-gray-700/30"
         id="mobile-menu">
         <nav class="flex flex-col p-6 gap-1">
-            <a href="{{ url('/') }}"
-                class="px-4 py-4 text-[16px] {{ request()->is('/') ? 'font-semibold text-gray-900 dark:text-white bg-gray-900/5 dark:bg-white/10' : 'font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white' }} hover:bg-gray-900/5 dark:hover:bg-white/10 rounded-lg transition-all duration-200 backdrop-blur-sm">
-                Beranda
-            </a>
-            <a href="{{ url('/infografis') }}"
-                class="px-4 py-4 text-[16px] {{ request()->is('infografis') ? 'font-semibold text-gray-900 dark:text-white bg-gray-900/5 dark:bg-white/10' : 'font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white' }} hover:bg-gray-900/5 dark:hover:bg-white/10 rounded-lg transition-all duration-200 backdrop-blur-sm">
-                Infografis
-            </a>
-            <a href="{{ url('/petadesa') }}"
-                class="px-4 py-4 text-[16px] {{ request()->is('petadesa') ? 'font-semibold text-gray-900 dark:text-white bg-gray-900/5 dark:bg-white/10' : 'font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white' }} hover:bg-gray-900/5 dark:hover:bg-white/10 rounded-lg transition-all duration-200 backdrop-blur-sm">
-                Peta Desa
-            </a>
-            <a href="{{ url('/layanan-informasi') }}"
-                class="px-4 py-4 text-[16px] {{ request()->is('layanan-informasi') ? 'font-semibold text-gray-900 dark:text-white bg-gray-900/5 dark:bg-white/10' : 'font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white' }} hover:bg-gray-900/5 dark:hover:bg-white/10 rounded-lg transition-all duration-200 backdrop-blur-sm">
-                Layanan Informasi
-            </a>
-            <a href="{{ url('/unduh') }}"
-                class="px-4 py-4 text-[16px] {{ request()->is('unduh') ? 'font-semibold text-gray-900 dark:text-white bg-gray-900/5 dark:bg-white/10' : 'font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white' }} hover:bg-gray-900/5 dark:hover:bg-white/10 rounded-lg transition-all duration-200 backdrop-blur-sm">
-                Unduh Peta
-            </a>
+            <a href="{{ url('/') }}" class="px-4 py-4 text-[16px] {{ request()->is('/') ? 'font-semibold text-gray-900 dark:text-white bg-gray-900/5 dark:bg-white/10' : 'font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white' }} hover:bg-gray-900/5 dark:hover:bg-white/10 rounded-lg transition-all duration-200 backdrop-blur-sm">Beranda</a>
+            <a href="{{ url('/infografis') }}" class="px-4 py-4 text-[16px] {{ request()->is('infografis') ? 'font-semibold text-gray-900 dark:text-white bg-gray-900/5 dark:bg-white/10' : 'font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white' }} hover:bg-gray-900/5 dark:hover:bg-white/10 rounded-lg transition-all duration-200 backdrop-blur-sm">Infografis</a>
+            <a href="{{ url('/petadesa') }}" class="px-4 py-4 text-[16px] {{ request()->is('petadesa') ? 'font-semibold text-gray-900 dark:text-white bg-gray-900/5 dark:bg-white/10' : 'font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white' }} hover:bg-gray-900/5 dark:hover:bg-white/10 rounded-lg transition-all duration-200 backdrop-blur-sm">Peta Desa</a>
+            <a href="{{ url('/layanan-informasi') }}" class="px-4 py-4 text-[16px] {{ request()->is('layanan-informasi') ? 'font-semibold text-gray-900 dark:text-white bg-gray-900/5 dark:bg-white/10' : 'font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white' }} hover:bg-gray-900/5 dark:hover:bg-white/10 rounded-lg transition-all duration-200 backdrop-blur-sm">Layanan Informasi</a>
+            <a href="{{ url('/unduh') }}" class="px-4 py-4 text-[16px] {{ request()->is('unduh') ? 'font-semibold text-gray-900 dark:text-white bg-gray-900/5 dark:bg-white/10' : 'font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white' }} hover:bg-gray-900/5 dark:hover:bg-white/10 rounded-lg transition-all duration-200 backdrop-blur-sm">Unduh Peta</a>
         </nav>
     </div>
 </header>
@@ -106,10 +71,18 @@
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         // ========================================
-        // TRANSPARENT TO GLASSMORPHISM TRANSITION
-        // State 1: Datar & Transparan
-        // State 2: Floating Pill & Glassmorphism
+        // LOGIKA PENYESUAIAN WARNA DINAMIS BLADE + JS
         // ========================================
+
+        // Cek apakah user sedang berada di halaman infografis
+        const isInfografis = {{ request()->is('infografis') ? 'true' : 'false' }};
+
+        // Jika di infografis, gunakan hijau tua. Jika tidak, gunakan putih.
+        const defaultTextColor = isInfografis ? 'text-[#142a1b]' : 'text-white';
+        const defaultTextHover = isInfografis ? 'hover:text-green-800' : 'hover:text-white/80';
+        const defaultSubtitleColor = isInfografis ? 'text-[#142a1b]' : 'text-white/90';
+        const defaultUnderlineColor = isInfografis ? 'bg-[#142a1b]' : 'bg-white';
+
         const navbarWrapper = document.getElementById('navbar-wrapper');
         const navbarContainer = document.getElementById('navbar-container');
         const logoText = document.getElementById('logo-text');
@@ -127,45 +100,34 @@
                     // STATE 2: FLOATING PILL + GLASSMORPHISM
                     // ========================================
 
-                    // Wrapper: Turun dari atas
                     navbarWrapper.classList.remove('top-0');
                     navbarWrapper.classList.add('top-4');
 
-                    // Container: Glassmorphism pill
                     navbarContainer.classList.add(
-                        'bg-white/50',         // Background SANGAT transparan (50%)
-                        'dark:bg-gray-900/50',
-                        'backdrop-blur-2xl',   // Blur intens
-                        'rounded-full',        // Pill shape
-                        'shadow-2xl',          // Shadow besar
-                        'shadow-gray-900/10',
-                        'dark:shadow-black/30',
-                        'border',
-                        'border-white/20',     // Border subtle
-                        'dark:border-gray-700/30',
-                        'max-w-5xl',
-                        'mx-auto',
-                        'w-[90%]'
+                        'bg-white/50', 'dark:bg-gray-900/50', 'backdrop-blur-2xl',
+                        'rounded-full', 'shadow-2xl', 'shadow-gray-900/10',
+                        'dark:shadow-black/30', 'border', 'border-white/20',
+                        'dark:border-gray-700/30', 'max-w-5xl', 'mx-auto', 'w-[90%]'
                     );
 
-                    // Text colors: Gelap untuk kontras dengan background terang
-                    logoText.classList.remove('text-white');
+                    // Gunakan warna gelap standar saat melayang (State 2)
+                    logoText.classList.remove(defaultTextColor);
                     logoText.classList.add('text-gray-900', 'dark:text-white');
 
-                    logoSubtitle.classList.remove('text-white/90');
+                    logoSubtitle.classList.remove(defaultSubtitleColor);
                     logoSubtitle.classList.add('text-gray-600', 'dark:text-gray-300');
 
                     navLinks.forEach(link => {
-                        link.classList.remove('text-white', 'hover:text-white/80');
+                        link.classList.remove(defaultTextColor, defaultTextHover);
                         link.classList.add('text-gray-700', 'dark:text-gray-300', 'hover:text-gray-900', 'dark:hover:text-white');
                     });
 
                     navUnderlines.forEach(underline => {
-                        underline.classList.remove('bg-white');
+                        underline.classList.remove(defaultUnderlineColor);
                         underline.classList.add('bg-gray-900', 'dark:bg-white');
                     });
 
-                    mobileBtn.classList.remove('text-white', 'hover:text-white/80');
+                    mobileBtn.classList.remove(defaultTextColor, defaultTextHover);
                     mobileBtn.classList.add('text-gray-900', 'dark:text-white', 'hover:text-gray-700', 'dark:hover:text-gray-300');
 
                 } else {
@@ -173,58 +135,43 @@
                     // STATE 1: DATAR & TRANSPARAN PENUH
                     // ========================================
 
-                    // Wrapper: Menempel di atas
                     navbarWrapper.classList.remove('top-4');
                     navbarWrapper.classList.add('top-0');
 
-                    // Container: Hapus semua styling (transparan penuh)
                     navbarContainer.classList.remove(
-                        'bg-white/50',
-                        'dark:bg-gray-900/50',
-                        'backdrop-blur-2xl',
-                        'rounded-full',
-                        'shadow-2xl',
-                        'shadow-gray-900/10',
-                        'dark:shadow-black/30',
-                        'border',
-                        'border-white/20',
-                        'dark:border-gray-700/30',
-                        'max-w-5xl',
-                        'mx-auto',
-                        'w-[90%]'
+                        'bg-white/50', 'dark:bg-gray-900/50', 'backdrop-blur-2xl',
+                        'rounded-full', 'shadow-2xl', 'shadow-gray-900/10',
+                        'dark:shadow-black/30', 'border', 'border-white/20',
+                        'dark:border-gray-700/30', 'max-w-5xl', 'mx-auto', 'w-[90%]'
                     );
 
-                    // Text colors: Putih untuk kontras dengan background (video/image)
+                    // Terapkan warna dinamis (Hijau tua untuk Infografis, Putih untuk yang lain)
                     logoText.classList.remove('text-gray-900', 'dark:text-white');
-                    logoText.classList.add('text-white');
+                    logoText.classList.add(defaultTextColor);
 
                     logoSubtitle.classList.remove('text-gray-600', 'dark:text-gray-300');
-                    logoSubtitle.classList.add('text-white/90');
+                    logoSubtitle.classList.add(defaultSubtitleColor);
 
                     navLinks.forEach(link => {
                         link.classList.remove('text-gray-700', 'dark:text-gray-300', 'hover:text-gray-900', 'dark:hover:text-white');
-                        link.classList.add('text-white', 'hover:text-white/80');
+                        link.classList.add(defaultTextColor, defaultTextHover);
                     });
 
                     navUnderlines.forEach(underline => {
                         underline.classList.remove('bg-gray-900', 'dark:bg-white');
-                        underline.classList.add('bg-white');
+                        underline.classList.add(defaultUnderlineColor);
                     });
 
                     mobileBtn.classList.remove('text-gray-900', 'dark:text-white', 'hover:text-gray-700', 'dark:hover:text-gray-300');
-                    mobileBtn.classList.add('text-white', 'hover:text-white/80');
+                    mobileBtn.classList.add(defaultTextColor, defaultTextHover);
                 }
             }
 
-            // Initial state check
             updateNavbarState();
 
-            // Scroll listener dengan optimization
             let scrollTimeout;
             window.addEventListener('scroll', function() {
-                if (scrollTimeout) {
-                    window.cancelAnimationFrame(scrollTimeout);
-                }
+                if (scrollTimeout) window.cancelAnimationFrame(scrollTimeout);
                 scrollTimeout = window.requestAnimationFrame(function() {
                     updateNavbarState();
                 });
@@ -232,7 +179,7 @@
         }
 
         // ========================================
-        // MOBILE MENU TOGGLE
+        // MOBILE MENU TOGGLE (Tidak Diubah)
         // ========================================
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -240,21 +187,17 @@
         if (mobileMenuButton && mobileMenu) {
             mobileMenuButton.addEventListener('click', function() {
                 const isOpen = !mobileMenu.classList.contains('-translate-x-full');
-
                 if (isOpen) {
-                    // Close menu
                     mobileMenu.classList.add('-translate-x-full');
                     mobileMenuButton.querySelector('.material-symbols-outlined').textContent = 'menu';
                     document.body.style.overflow = '';
                 } else {
-                    // Open menu
                     mobileMenu.classList.remove('-translate-x-full');
                     mobileMenuButton.querySelector('.material-symbols-outlined').textContent = 'close';
                     document.body.style.overflow = 'hidden';
                 }
             });
 
-            // Close menu when clicking on a link
             const mobileLinks = mobileMenu.querySelectorAll('a');
             mobileLinks.forEach(link => {
                 link.addEventListener('click', function() {
@@ -264,7 +207,6 @@
                 });
             });
 
-            // Close menu on escape key
             document.addEventListener('keydown', function(e) {
                 if (e.key === 'Escape' && !mobileMenu.classList.contains('-translate-x-full')) {
                     mobileMenu.classList.add('-translate-x-full');
@@ -275,7 +217,7 @@
         }
 
         // ========================================
-        // SMOOTH SCROLL FOR ANCHOR LINKS
+        // SMOOTH SCROLL FOR ANCHOR LINKS (Tidak Diubah)
         // ========================================
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
