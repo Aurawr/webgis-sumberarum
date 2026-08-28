@@ -10,13 +10,27 @@
             </video>
             <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
         </div>
-        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center gap-6">
-            <h1 class="font-display-lg font-bold text-[65px] md:text-[80px] text-tertiary-fixed drop-shadow-lg">Desa
-                Sumberarum</h1>
+        <div class="relative z-10 text-center px-6 max-w-4xl mx-auto flex flex-col items-center justify-center gap-6 py-12">
+
+            <!-- Judul Hero (Ukuran Proposional & Elegant Gradient) -->
+            <h1
+                class="font-display-lg text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-white via-tertiary-fixed to-tertiary-fixed/80 drop-shadow-lg leading-tight">
+                Desa Sumberarum
+            </h1>
+
+            <!-- Subtitle Minimalis -->
+            <p class="text-sm sm:text-base md:text-lg text-white/80 max-w-xl font-normal leading-relaxed drop-shadow-sm">
+                Sistem Informasi Geografis & Eksplorasi Potensi Wilayah
+            </p>
+
+            <!-- Tombol Aesthetic Glassmorphism -->
             <button
-                class="bg-tertiary-fixed text-on-tertiary-fixed px-8 py-3 rounded-full font-label-lg text-[16px] flex items-center gap-2 hover:bg-white transition-all shadow-lg">
-                Jelajahi Desa
-                <span class="material-symbols-outlined">expand_more</span>
+                class="group relative inline-flex items-center gap-2.5 bg-white/15 hover:bg-white/25 active:scale-95 text-white border border-white/30 backdrop-blur-md px-7 py-3.5 rounded-full font-semibold text-sm md:text-base transition-all duration-300 shadow-lg hover:shadow-emerald-500/10 hover:border-white/50">
+                <span>Jelajahi Desa</span>
+                <span
+                    class="material-symbols-outlined text-xl transition-transform duration-300 group-hover:translate-y-1 text-emerald-300">
+                    expand_more
+                </span>
             </button>
         </div>
     </section>
