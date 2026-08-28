@@ -92,28 +92,5 @@
             </a>
         </div>
     </section>
-
-    <footer
-        class="bg-primary dark:bg-primary-container text-on-primary dark:text-on-primary-container full-width rounded-t-lg relative mt-12">
-        <div
-            class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-section-padding py-section-padding max-w-container-max mx-auto relative z-10">
-            <div class="flex flex-col gap-6">
-                <h3
-                    class="font-headline-xl text-headline-xl text-on-primary dark:text-on-primary-container font-extrabold mb-4">
-                    Desa<br />Sumberarum</h3>
-            </div>
-            <div class="flex flex-col gap-4">
-                <h4 class="font-headline-lg text-headline-lg text-tertiary-fixed dark:text-tertiary-fixed-dim mb-2">Tautan
-                    Penting</h4>
-                <a class="font-body-md text-body-md text-on-primary/80 dark:text-on-primary-container/80 hover:text-secondary-fixed transition-all"
-                    href="#">Website Kabupaten Magelang</a>
-            </div>
-            <div class="flex flex-col gap-4">
-                <h4 class="font-headline-lg text-headline-lg text-tertiary-fixed dark:text-tertiary-fixed-dim mb-2">Sosial
-                    Media</h4>
-                <a class="font-body-md text-body-md text-on-primary/80 dark:text-on-primary-container/80 hover:text-secondary-fixed transition-all"
-                    href="#">Instagram</a>
-            </div>
-        </div>
-    </footer>
+<x-footer />
 @endsection
