@@ -5,9 +5,9 @@
 
     @php
         $data = [
-            'demografi' => ['total' => 3542],
-            'luas_wilayah' => 450,
-            'administrasi' => ['rt' => 18, 'rw' => 6, 'dusun' => 4],
+            'demografi' => ['total' => 6453],
+            'luas_wilayah' => 445.565,
+            'administrasi' => ['rt' => 57, 'rw' => 17, 'dusun' => 15],
             'lahan' => [
                 'pertanian' => 55,
                 'pemukiman' => 25,
@@ -26,7 +26,7 @@
     @endphp
 
     <section
-        class="bg-gradient-to-b from-surface-container-low to-surface text-on-surface py-16 px-margin-mobile md:px-gutter min-h-screen relative overflow-hidden"
+        class="bg-gradient-to-b from-surface-container-low to-surface text-on-surface pt-28 pb-16 md:pt-36 md:pb-20 px-margin-mobile md:px-gutter min-h-screen relative overflow-hidden"
         id="infografis">
 
         <div
