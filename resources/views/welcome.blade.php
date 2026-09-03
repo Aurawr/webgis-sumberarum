@@ -11,13 +11,13 @@
             <!-- Overlay Gelap Utama -->
             <div class="absolute inset-0 bg-black/20"></div>
 
-            <!-- GRADIENT FADE-OUT SMOOTH KE SECTON BAWAH (Penambahan Efek Mulus) -->
+            <!-- GRADIENT FADE-OUT SMOOTH KE SECTION BAWAH -->
             <div class="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-b from-transparent via-primary-container/60 to-primary-container pointer-events-none z-10"></div>
         </div>
 
         <div class="relative z-10 text-center px-6 max-w-4xl mx-auto flex flex-col items-center justify-center gap-6 py-12">
 
-            <!-- Judul Hero (Ukuran Proposional & Elegant Gradient) -->
+            <!-- Judul Hero -->
             <h1
                 class="font-display-lg text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-white via-tertiary-fixed to-tertiary-fixed/80 drop-shadow-lg leading-tight">
                 Desa Sumberarum
@@ -95,12 +95,11 @@
         </div>
     </section>
 
-    <!-- SECTION STATISTIK DESA (Di antara Profil Desa dan Peta Spasial) -->
+    <!-- SECTION STATISTIK DESA -->
     <section
         class="bg-gradient-to-b from-primary-container via-primary to-primary text-on-primary py-16 px-margin-mobile md:px-gutter relative z-10"
         id="statistik-desa">
         <div class="max-w-container-max mx-auto">
-            <!-- Header Section Statistik Minimalis -->
             <div class="text-center max-w-xl mx-auto mb-10 md:mb-12">
                 <div
                     class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15 text-tertiary-fixed text-xs font-semibold uppercase tracking-wider mb-3 backdrop-blur-sm shadow-sm">
@@ -113,7 +112,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-                <!-- Kartu 1: Populasi Penduduk (Ikon Pengguna) -->
+                <!-- Kartu 1: Populasi Penduduk -->
                 <div
                     class="stat-card-item bg-white/5 hover:bg-white/10 backdrop-blur-md border border-white/10 hover:border-tertiary-fixed/40 transition-all duration-300 rounded-2xl p-6 md:p-8 flex flex-col items-center text-center shadow-lg hover:shadow-emerald-500/10 group">
                     <div
@@ -132,7 +131,7 @@
                     </div>
                 </div>
 
-                <!-- Kartu 2: Luas Wilayah (Ikon Luas Area) -->
+                <!-- Kartu 2: Luas Wilayah -->
                 <div
                     class="stat-card-item bg-white/5 hover:bg-white/10 backdrop-blur-md border border-white/10 hover:border-tertiary-fixed/40 transition-all duration-300 rounded-2xl p-6 md:p-8 flex flex-col items-center text-center shadow-lg hover:shadow-emerald-500/10 group">
                     <div
@@ -151,7 +150,7 @@
                     </div>
                 </div>
 
-                <!-- Kartu 3: Total Dusun (Ikon Pemukiman/Rumah) -->
+                <!-- Kartu 3: Total Dusun -->
                 <div
                     class="stat-card-item bg-white/5 hover:bg-white/10 backdrop-blur-md border border-white/10 hover:border-tertiary-fixed/40 transition-all duration-300 rounded-2xl p-6 md:p-8 flex flex-col items-center text-center shadow-lg hover:shadow-emerald-500/10 group">
                     <div
@@ -196,11 +195,10 @@
         </div>
     </section>
 
-    <!-- SECTION SEJARAH DESA (2 Kolom 60:40 di Desktop, Max-width 65ch Teks, Placeholder Lanskap rounded-2xl shadow-lg) -->
+    <!-- SECTION SEJARAH DESA -->
     <section class="bg-primary text-on-primary py-section-padding px-margin-mobile md:px-gutter" id="sejarah">
         <div class="max-w-container-max mx-auto">
             <div class="flex flex-col lg:flex-row gap-10 lg:gap-14 items-center justify-between">
-                <!-- Kolom Kiri: 60% Teks Sejarah dengan max-w-[65ch] dan jarak antar paragraf yang lega -->
                 <div id="sejarah-text" class="w-full lg:w-[60%] flex flex-col gap-6 max-w-[65ch]">
                     <div class="flex items-center gap-2 text-tertiary-fixed">
                         <span class="material-symbols-outlined text-xl">history_edu</span>
@@ -233,17 +231,14 @@
                     </div>
                 </div>
 
-                <!-- Kolom Kanan: 40% Placeholder Gambar / Foto Lanskap Desa (rounded-2xl, shadow-lg) -->
                 <div id="sejarah-image" class="w-full lg:w-[40%] flex justify-center">
                     <div
                         class="relative w-full max-w-lg lg:max-w-none group overflow-hidden rounded-2xl shadow-lg border border-white/10 bg-primary-container aspect-[4/3] sm:aspect-[16/11]">
-                        <!-- Foto Lanskap Desa -->
                         <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1000&q=80"
                             alt="Lanskap Desa Sumberarum"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                         <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent"></div>
 
-                        <!-- Overlay Keterangan Lanskap -->
                         <div
                             class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/20">
                             <div
@@ -260,6 +255,7 @@
         </div>
     </section>
 
+    <!-- SECTION DESTINASI WISATA -->
     <section class="bg-primary-container text-on-primary relative w-full h-[300vh]" id="destinasi-wrapper">
         <div class="sticky top-0 h-screen w-full overflow-hidden flex flex-col pt-20 pb-10" id="destinasi-pinned">
 
@@ -273,8 +269,29 @@
                 </p>
             </div>
 
+            @php
+                $destinasiList = [
+                    [
+                        'judul' => 'Makam Ky Raden Sayyid Abdulloh',
+                        'deskripsi' => 'Wisata religi dan ziarah sejarah tokoh agama terkemuka di Desa Sumberarum.',
+                        'gambar' => asset('assets/images/destinasi/WisataReligi.jpeg')
+                    ],
+                    [
+                        'judul' => 'Destinasi Wisata 2',
+                        'deskripsi' => 'Nikmati pemandangan alam dan keindahan persawahan Desa Sumberarum.',
+                        'gambar' => 'https://picsum.photos/seed/wisatabaru2/600/500'
+                    ],
+                    [
+                        'judul' => 'Destinasi Wisata 3',
+                        'deskripsi' => 'Jelajahi potensi kebudayaan dan kearifan lokal warga desa.',
+                        'gambar' => 'https://picsum.photos/seed/wisatabaru3/600/500'
+                    ],
+                ];
+            @endphp
+
             <div class="relative w-full h-full flex items-center justify-center mt-12 md:mt-16" id="cards-container">
-                @for ($i = 1; $i <= 3; $i++)
+                @foreach ($destinasiList as $index => $item)
+                    @php $i = $index + 1; @endphp
                     <div class="destinasi-card absolute top-1/2 left-1/2 w-[280px] md:w-[340px]"
                         id="destinasi-card-{{ $i }}">
                         <div
@@ -290,20 +307,21 @@
 
                             <div
                                 class="rounded-xl overflow-hidden h-[280px] md:h-[320px] w-full shrink-0 shadow-inner relative bg-black/10">
-                                <img src="https://picsum.photos/seed/wisatabaru{{ $i }}/600/500"
-                                    alt="Wisata {{ $i }}"
+                                <img src="{{ $item['gambar'] }}"
+                                    alt="{{ $item['judul'] }}"
                                     class="w-full h-full object-cover pointer-events-none">
                             </div>
                             <div class="px-2 pb-2 pt-4 text-primary">
-                                <h3 class="font-headline-lg text-[22px] font-bold mb-2">Destinasi Wisata
-                                    {{ $i }}
+                                <h3 class="font-headline-lg text-[22px] font-bold mb-2">
+                                    {{ $item['judul'] }}
                                 </h3>
-                                <p class="font-body-md text-sm text-primary/80">Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                                <p class="font-body-md text-sm text-primary/80">
+                                    {{ $item['deskripsi'] }}
+                                </p>
                             </div>
                         </div>
                     </div>
-                @endfor
+                @endforeach
             </div>
 
             <div class="absolute right-6 top-1/2 -translate-y-1/2 flex flex-col gap-4 z-50">
