@@ -20,7 +20,7 @@ return view('dashboard');
 Route::get('/infografis', function () {return view('infografis');});
 Route::get('/unduh', function () {return view('unduh');});
 
-Route::get('/layanan-informasi', function () { return view('layananinformasi');});
+Route::get('/jelajah-desa', function () { return view('jelajahdesa');});
 
 Route::get('/petadesa', function () { return view('petadesa'); });
 
