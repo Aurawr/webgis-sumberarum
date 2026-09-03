@@ -55,7 +55,7 @@
                 </div>
                 <div class="flex items-center gap-2 font-body-md text-body-md text-on-primary/75">
                     <span class="material-symbols-outlined text-lg">call</span>
-                    <span>(0293) 000-000</span>
+                    <span>(+62) 857-4392-8744</span>
                 </div>
             </div>
         </div>

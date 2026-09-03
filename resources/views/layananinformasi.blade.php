@@ -3,7 +3,8 @@
 @section('content')
 <x-navbar />
 
-    <section class="bg-primary text-on-primary py-16 px-margin-mobile md:px-gutter">
+    <!-- PERBAIKAN DI SINI: Mengubah py-16 menjadi pt-36 pb-20 agar memberi ruang dari navbar -->
+    <section class="bg-primary text-on-primary pt-36 pb-20 px-margin-mobile md:px-gutter">
         <div class="max-w-container-max mx-auto text-center flex flex-col items-center gap-4">
             <span class="material-symbols-outlined text-tertiary-fixed text-6xl">info</span>
             <h1 class="font-display-lg text-headline-xl md:text-display-lg text-tertiary-fixed">Layanan Informasi Desa</h1>
