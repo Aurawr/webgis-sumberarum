@@ -38,30 +38,46 @@
     <section class="bg-primary-container text-on-primary py-section-padding px-margin-mobile md:px-gutter" id="profil">
         <div class="max-w-container-max mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
-                <!-- Sambutan dengan Elemen Dekoratif Quote Icon Besar Transparan -->
+
                 <div class="md:col-span-7 relative flex flex-col gap-6">
                     <svg class="absolute -top-6 -left-6 md:-left-8 w-24 h-24 md:w-32 md:h-32 text-tertiary-fixed/15 pointer-events-none select-none -z-0"
                         fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                        <path
+                            d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                     </svg>
 
-                    <div class="relative z-10 flex flex-col gap-6">
-                        <h2 class="font-headline-xl text-headline-xl text-tertiary-fixed">Profil Desa</h2>
-                        <p class="font-body-lg text-body-lg text-on-primary/90 leading-relaxed">
-                            Selamat datang di portal informasi resmi Desa Sumberarum. Kami menyediakan layanan berbasis spasial
-                            (WebGIS) untuk mempermudah akses informasi geografis, batas wilayah, serta potensi desa secara
-                            transparan dan akurat.
+                    <div class="relative z-10 flex flex-col items-center gap-6">
+                        <h2 class="font-headline-xl text-headline-xl text-tertiary-fixed text-center">Sambutan Kepala Desa
+                        </h2>
+                        <p class="font-body-lg text-body-lg text-on-primary/90 leading-relaxed text-justify w-full">
+                            Assalamu'alaikum Warahmatullahi Wabarakaatuh
+                            <br><br>
+                            Segala puji dan syukur marilah kita panjatkan ke hadirat Allah SWT, Tuhan Yang Maha Esa, atas
+                            limpahan rahmat dan karunia Nya sehingga kita dapat terus menjalankan amanah dalam
+                            penyelenggaraan pemerintahan, pembangunan, dan pelayanan kepada masyarakat Desa Sumberarum.
+                            Dalam upaya mewujudkan pelayanan publik yang semakin baik, kami menyadari bahwa masih diperlukan
+                            berbagai langkah pengembangan, termasuk menghadirkan sistem informasi yang terpadu sebagai
+                            jembatan penyampaian informasi secara cepat, terbuka, dan mudah diakses oleh seluruh masyarakat.
+                            <br><br>
+                            Melalui Website Pemerintah Desa Sumberarum, kami berharap tercipta ruang informasi yang mampu
+                            mempererat komunikasi antara pemerintah desa dan masyarakat, sekaligus menjadi sarana
+                            partisipasi bersama dalam mendukung pembangunan desa yang sejalan dengan amanat Undang Undang
+                            Nomor 6 Tahun 2014 tentang Desa. Kami juga mengharapkan kritik dan saran yang membangun demi
+                            pengembangan website ini agar dapat terus memberikan informasi yang bermanfaat dan
+                            berkesinambungan bagi seluruh warga. Semoga Allah SWT senantiasa memberikan kemudahan dan
+                            keberkahan dalam setiap ikhtiar kita. Aamiin.
+                            <br><br>
+                            Wassalamu'alaikum Warahmatullahi Wabarakaatuh
                         </p>
                     </div>
                 </div>
 
-                <!-- Foto & Tipografi Personal Kepala Desa -->
                 <div class="md:col-span-5 flex flex-col items-center justify-center mt-12 md:mt-0">
                     <div
                         class="relative w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-tertiary-fixed overflow-hidden shadow-2xl group">
                         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ9MHOhNPfG1Sxi-y4qBG11GZN4d9GTt4z6MbbntXR9_KfrdAzIxi8ouv9v1PuudxQ5-s8i0tki-5FEQJaDWfWxYPt0SLDM25NIdMIsGaN__JiIStnbI3QK70X7MQkxEXxQVpI7HwLEhF6tk2LC4ja1TrIuPWpmIoF2neKoYAXQh5ZrCNyK5bFQ4kszUC0id1iFn0PtC-DhiFbBscHgdY3mDAuHDEwxtljdWENh0mqxZ-KBBjBm3VyIRkjtLTPmurQ_Kvhrk1YglDs" 
-                            alt="Muhzen Fanani - Kepala Desa Sumberarum" />
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ9MHOhNPfG1Sxi-y4qBG11GZN4d9GTt4z6MbbntXR9_KfrdAzIxi8ouv9v1PuudxQ5-s8i0tki-5FEQJaDWfWxYPt0SLDM25NIdMIsGaN__JiIStnbI3QK70X7MQkxEXxQVpI7HwLEhF6tk2LC4ja1TrIuPWpmIoF2neKoYAXQh5ZrCNyK5bFQ4kszUC0id1iFn0PtC-DhiFbBscHgdY3mDAuHDEwxtljdWENh0mqxZ-KBBjBm3VyIRkjtLTPmurQ_Kvhrk1YglDs"
+                            alt="Muhzen Fanani Kepala Desa Sumberarum" />
                     </div>
                     <div
                         class="bg-surface/10 backdrop-blur-md border border-white/20 mt-6 px-8 py-3.5 rounded-xl text-center shadow-lg">
@@ -69,16 +85,20 @@
                         <p class="font-medium text-xs md:text-sm text-on-primary/80 mt-0.5">Kepala Desa Sumberarum</p>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
     <!-- SECTION STATISTIK DESA (Di antara Profil Desa dan Peta Spasial) -->
-    <section class="bg-gradient-to-b from-primary-container via-primary to-primary text-on-primary py-16 px-margin-mobile md:px-gutter relative z-10" id="statistik-desa">
+    <section
+        class="bg-gradient-to-b from-primary-container via-primary to-primary text-on-primary py-16 px-margin-mobile md:px-gutter relative z-10"
+        id="statistik-desa">
         <div class="max-w-container-max mx-auto">
             <!-- Header Section Statistik Minimalis -->
             <div class="text-center max-w-xl mx-auto mb-10 md:mb-12">
-                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15 text-tertiary-fixed text-xs font-semibold uppercase tracking-wider mb-3 backdrop-blur-sm shadow-sm">
+                <div
+                    class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15 text-tertiary-fixed text-xs font-semibold uppercase tracking-wider mb-3 backdrop-blur-sm shadow-sm">
                     <span class="material-symbols-outlined text-sm">analytics</span>
                     <span>Sekilas Data Desa</span>
                 </div>
@@ -89,45 +109,60 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                 <!-- Kartu 1: Populasi Penduduk (Ikon Pengguna) -->
-                <div class="stat-card-item bg-white/5 hover:bg-white/10 backdrop-blur-md border border-white/10 hover:border-tertiary-fixed/40 transition-all duration-300 rounded-2xl p-6 md:p-8 flex flex-col items-center text-center shadow-lg hover:shadow-emerald-500/10 group">
-                    <div class="w-16 h-16 rounded-2xl bg-tertiary-fixed/10 border border-tertiary-fixed/20 flex items-center justify-center mb-5 text-tertiary-fixed group-hover:scale-110 group-hover:bg-tertiary-fixed/20 transition-all duration-300 shadow-inner">
+                <div
+                    class="stat-card-item bg-white/5 hover:bg-white/10 backdrop-blur-md border border-white/10 hover:border-tertiary-fixed/40 transition-all duration-300 rounded-2xl p-6 md:p-8 flex flex-col items-center text-center shadow-lg hover:shadow-emerald-500/10 group">
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-tertiary-fixed/10 border border-tertiary-fixed/20 flex items-center justify-center mb-5 text-tertiary-fixed group-hover:scale-110 group-hover:bg-tertiary-fixed/20 transition-all duration-300 shadow-inner">
                         <span class="material-symbols-outlined text-3xl">groups</span>
                     </div>
-                    <div class="font-display-lg text-3xl sm:text-4xl md:text-5xl font-extrabold text-tertiary-fixed tracking-tight">
+                    <div
+                        class="font-display-lg text-3xl sm:text-4xl md:text-5xl font-extrabold text-tertiary-fixed tracking-tight">
                         <span class="stat-counter" data-target="15000" data-suffix="+">0+</span>
                     </div>
                     <p class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-on-primary/75 mt-2">
                         Populasi Penduduk
                     </p>
-                    <div class="w-10 h-0.5 bg-tertiary-fixed/30 rounded-full mt-4 group-hover:w-16 group-hover:bg-tertiary-fixed transition-all duration-300"></div>
+                    <div
+                        class="w-10 h-0.5 bg-tertiary-fixed/30 rounded-full mt-4 group-hover:w-16 group-hover:bg-tertiary-fixed transition-all duration-300">
+                    </div>
                 </div>
 
                 <!-- Kartu 2: Luas Wilayah (Ikon Luas Area) -->
-                <div class="stat-card-item bg-white/5 hover:bg-white/10 backdrop-blur-md border border-white/10 hover:border-tertiary-fixed/40 transition-all duration-300 rounded-2xl p-6 md:p-8 flex flex-col items-center text-center shadow-lg hover:shadow-emerald-500/10 group">
-                    <div class="w-16 h-16 rounded-2xl bg-tertiary-fixed/10 border border-tertiary-fixed/20 flex items-center justify-center mb-5 text-tertiary-fixed group-hover:scale-110 group-hover:bg-tertiary-fixed/20 transition-all duration-300 shadow-inner">
+                <div
+                    class="stat-card-item bg-white/5 hover:bg-white/10 backdrop-blur-md border border-white/10 hover:border-tertiary-fixed/40 transition-all duration-300 rounded-2xl p-6 md:p-8 flex flex-col items-center text-center shadow-lg hover:shadow-emerald-500/10 group">
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-tertiary-fixed/10 border border-tertiary-fixed/20 flex items-center justify-center mb-5 text-tertiary-fixed group-hover:scale-110 group-hover:bg-tertiary-fixed/20 transition-all duration-300 shadow-inner">
                         <span class="material-symbols-outlined text-3xl">crop_free</span>
                     </div>
-                    <div class="font-display-lg text-3xl sm:text-4xl md:text-5xl font-extrabold text-tertiary-fixed tracking-tight">
+                    <div
+                        class="font-display-lg text-3xl sm:text-4xl md:text-5xl font-extrabold text-tertiary-fixed tracking-tight">
                         <span class="stat-counter" data-target="445" data-suffix=" Hektare">0 Hektare</span>
                     </div>
                     <p class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-on-primary/75 mt-2">
                         Luas Wilayah
                     </p>
-                    <div class="w-10 h-0.5 bg-tertiary-fixed/30 rounded-full mt-4 group-hover:w-16 group-hover:bg-tertiary-fixed transition-all duration-300"></div>
+                    <div
+                        class="w-10 h-0.5 bg-tertiary-fixed/30 rounded-full mt-4 group-hover:w-16 group-hover:bg-tertiary-fixed transition-all duration-300">
+                    </div>
                 </div>
 
                 <!-- Kartu 3: Total Dusun (Ikon Pemukiman/Rumah) -->
-                <div class="stat-card-item bg-white/5 hover:bg-white/10 backdrop-blur-md border border-white/10 hover:border-tertiary-fixed/40 transition-all duration-300 rounded-2xl p-6 md:p-8 flex flex-col items-center text-center shadow-lg hover:shadow-emerald-500/10 group">
-                    <div class="w-16 h-16 rounded-2xl bg-tertiary-fixed/10 border border-tertiary-fixed/20 flex items-center justify-center mb-5 text-tertiary-fixed group-hover:scale-110 group-hover:bg-tertiary-fixed/20 transition-all duration-300 shadow-inner">
+                <div
+                    class="stat-card-item bg-white/5 hover:bg-white/10 backdrop-blur-md border border-white/10 hover:border-tertiary-fixed/40 transition-all duration-300 rounded-2xl p-6 md:p-8 flex flex-col items-center text-center shadow-lg hover:shadow-emerald-500/10 group">
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-tertiary-fixed/10 border border-tertiary-fixed/20 flex items-center justify-center mb-5 text-tertiary-fixed group-hover:scale-110 group-hover:bg-tertiary-fixed/20 transition-all duration-300 shadow-inner">
                         <span class="material-symbols-outlined text-3xl">holiday_village</span>
                     </div>
-                    <div class="font-display-lg text-3xl sm:text-4xl md:text-5xl font-extrabold text-tertiary-fixed tracking-tight">
+                    <div
+                        class="font-display-lg text-3xl sm:text-4xl md:text-5xl font-extrabold text-tertiary-fixed tracking-tight">
                         <span class="stat-counter" data-target="15" data-suffix=" Dusun">0 Dusun</span>
                     </div>
                     <p class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-on-primary/75 mt-2">
                         Total Dusun
                     </p>
-                    <div class="w-10 h-0.5 bg-tertiary-fixed/30 rounded-full mt-4 group-hover:w-16 group-hover:bg-tertiary-fixed transition-all duration-300"></div>
+                    <div
+                        class="w-10 h-0.5 bg-tertiary-fixed/30 rounded-full mt-4 group-hover:w-16 group-hover:bg-tertiary-fixed transition-all duration-300">
+                    </div>
                 </div>
             </div>
         </div>
@@ -169,36 +204,50 @@
                     <h2 class="font-headline-xl text-3xl sm:text-4xl md:text-5xl font-bold text-tertiary-fixed">
                         Sejarah Desa
                     </h2>
-                    
-                    <div class="space-y-4 font-body-lg text-body-lg text-on-primary/90 leading-relaxed text-justify md:text-left">
+
+                    <div
+                        class="space-y-4 font-body-lg text-body-lg text-on-primary/90 leading-relaxed text-justify md:text-left">
                         <p>
-                            Desa Sumberarum merupakan penggabungan dari tiga desa, yaitu Desa Dimajar, Sumber, dan Sadegan. Dinamakan Sumberarum karena terdapat sumber mata air di salah satu dusun di Desa Sumberarum, tepatnya di Dusun Teluk. Diharapkan Desa Sumberarum ke depan akan menjadi baik dan lebih baik sehingga akan senantiasa harum sesuai dengan namanya, maka terangkai nama Sumberarum.
+                            Desa Sumberarum merupakan penggabungan dari tiga desa, yaitu Desa Dimajar, Sumber, dan Sadegan.
+                            Dinamakan Sumberarum karena terdapat sumber mata air di salah satu dusun di Desa Sumberarum,
+                            tepatnya di Dusun Teluk. Diharapkan Desa Sumberarum ke depan akan menjadi baik dan lebih baik
+                            sehingga akan senantiasa harum sesuai dengan namanya, maka terangkai nama Sumberarum.
                         </p>
                         <p>
-                            Desa Sumberarum merupakan salah satu desa di Kecamatan Tempuran, Kabupaten Magelang, Provinsi Jawa Tengah, yang memiliki luas wilayah 445,565 hektare dan secara geografis terletak pada koordinat 7°46'33" hingga 7°50'00" LS serta 110°39'12" BT. Wilayah desa ini berbatasan dengan Desa Tempurejo di sebelah utara, Kecamatan Mertoyudan di sebelah timur, Desa Ringinanom di sebelah selatan, dan Desa Sidoagung di sebelah barat.
+                            Desa Sumberarum merupakan salah satu desa di Kecamatan Tempuran, Kabupaten Magelang, Provinsi
+                            Jawa Tengah, yang memiliki luas wilayah 445,565 hektare dan secara geografis terletak pada
+                            koordinat 7°46'33" hingga 7°50'00" LS serta 110°39'12" BT. Wilayah desa ini berbatasan dengan
+                            Desa Tempurejo di sebelah utara, Kecamatan Mertoyudan di sebelah timur, Desa Ringinanom di
+                            sebelah selatan, dan Desa Sidoagung di sebelah barat.
                         </p>
                         <p>
-                            Secara administratif, Desa Sumberarum terbagi menjadi 15 dusun, 17 Rukun Warga, dan 57 Rukun Tetangga, dengan tipologi kawasan yang meliputi area persawahan, perladangan, kerajinan dan industri kecil, serta sektor jasa dan perdagangan.
+                            Secara administratif, Desa Sumberarum terbagi menjadi 15 dusun, 17 Rukun Warga, dan 57 Rukun
+                            Tetangga, dengan tipologi kawasan yang meliputi area persawahan, perladangan, kerajinan dan
+                            industri kecil, serta sektor jasa dan perdagangan.
                         </p>
                     </div>
                 </div>
 
                 <!-- Kolom Kanan: 40% Placeholder Gambar / Foto Lanskap Desa (rounded-2xl, shadow-lg) -->
                 <div id="sejarah-image" class="w-full lg:w-[40%] flex justify-center">
-                    <div class="relative w-full max-w-lg lg:max-w-none group overflow-hidden rounded-2xl shadow-lg border border-white/10 bg-primary-container aspect-[4/3] sm:aspect-[16/11]">
+                    <div
+                        class="relative w-full max-w-lg lg:max-w-none group overflow-hidden rounded-2xl shadow-lg border border-white/10 bg-primary-container aspect-[4/3] sm:aspect-[16/11]">
                         <!-- Foto Lanskap Desa -->
                         <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1000&q=80"
-                             alt="Lanskap Desa Sumberarum"
-                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            alt="Lanskap Desa Sumberarum"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                         <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent"></div>
-                        
+
                         <!-- Overlay Keterangan Lanskap -->
-                        <div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/20">
-                            <div class="flex items-center gap-2 text-tertiary-fixed text-xs font-bold uppercase tracking-wider mb-1">
+                        <div
+                            class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/20">
+                            <div
+                                class="flex items-center gap-2 text-tertiary-fixed text-xs font-bold uppercase tracking-wider mb-1">
                                 <span class="material-symbols-outlined text-base">landscape</span>
                                 <span>Lanskap Desa Sumberarum</span>
                             </div>
-                            <p class="text-white text-xs sm:text-sm font-medium">Panorama Alam, Persawahan & Keindahan Wilayah Tempuran</p>
+                            <p class="text-white text-xs sm:text-sm font-medium">Panorama Alam, Persawahan & Keindahan
+                                Wilayah Tempuran</p>
                         </div>
                     </div>
                 </div>
@@ -237,10 +286,12 @@
                             <div
                                 class="rounded-xl overflow-hidden h-[280px] md:h-[320px] w-full shrink-0 shadow-inner relative bg-black/10">
                                 <img src="https://picsum.photos/seed/wisatabaru{{ $i }}/600/500"
-                                    alt="Wisata {{ $i }}" class="w-full h-full object-cover pointer-events-none">
+                                    alt="Wisata {{ $i }}"
+                                    class="w-full h-full object-cover pointer-events-none">
                             </div>
                             <div class="px-2 pb-2 pt-4 text-primary">
-                                <h3 class="font-headline-lg text-[22px] font-bold mb-2">Destinasi Wisata {{ $i }}
+                                <h3 class="font-headline-lg text-[22px] font-bold mb-2">Destinasi Wisata
+                                    {{ $i }}
                                 </h3>
                                 <p class="font-body-md text-sm text-primary/80">Lorem ipsum dolor sit amet, consectetur
                                     adipiscing elit, sed do eiusmod tempor incididunt.</p>
@@ -267,6 +318,7 @@
             transform: translateY(24px);
             transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
+
         .stat-card-item.is-visible {
             opacity: 1;
             transform: translateY(0);
@@ -325,7 +377,9 @@
                                 observer.unobserve(entry.target);
                             }
                         });
-                    }, { threshold: 0.1 });
+                    }, {
+                        threshold: 0.1
+                    });
                     observer.observe(statSection);
                 } else {
                     triggerStatistik();
@@ -337,33 +391,33 @@
                 gsap.registerPlugin(ScrollTrigger);
 
                 // Fade-in Sejarah Section
-                gsap.fromTo("#sejarah-text", 
-                    { opacity: 0, x: -30 },
-                    {
-                        opacity: 1,
-                        x: 0,
-                        duration: 0.8,
-                        ease: "power2.out",
-                        scrollTrigger: {
-                            trigger: "#sejarah",
-                            start: "top 80%",
-                        }
+                gsap.fromTo("#sejarah-text", {
+                    opacity: 0,
+                    x: -30
+                }, {
+                    opacity: 1,
+                    x: 0,
+                    duration: 0.8,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: "#sejarah",
+                        start: "top 80%",
                     }
-                );
+                });
 
-                gsap.fromTo("#sejarah-image", 
-                    { opacity: 0, x: 30 },
-                    {
-                        opacity: 1,
-                        x: 0,
-                        duration: 0.8,
-                        ease: "power2.out",
-                        scrollTrigger: {
-                            trigger: "#sejarah",
-                            start: "top 80%",
-                        }
+                gsap.fromTo("#sejarah-image", {
+                    opacity: 0,
+                    x: 30
+                }, {
+                    opacity: 1,
+                    x: 0,
+                    duration: 0.8,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: "#sejarah",
+                        start: "top 80%",
                     }
-                );
+                });
 
                 const cards = gsap.utils.toArray('.destinasi-card');
                 const dots = gsap.utils.toArray('.dest-dot');
