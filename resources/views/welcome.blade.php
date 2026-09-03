@@ -75,8 +75,9 @@
                 <div class="md:col-span-5 flex flex-col items-center justify-center mt-12 md:mt-0">
                     <div
                         class="relative w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-tertiary-fixed overflow-hidden shadow-2xl group">
+                        <!-- Mengubah sumber gambar ke folder img lokal -->
                         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ9MHOhNPfG1Sxi-y4qBG11GZN4d9GTt4z6MbbntXR9_KfrdAzIxi8ouv9v1PuudxQ5-s8i0tki-5FEQJaDWfWxYPt0SLDM25NIdMIsGaN__JiIStnbI3QK70X7MQkxEXxQVpI7HwLEhF6tk2LC4ja1TrIuPWpmIoF2neKoYAXQh5ZrCNyK5bFQ4kszUC0id1iFn0PtC-DhiFbBscHgdY3mDAuHDEwxtljdWENh0mqxZ-KBBjBm3VyIRkjtLTPmurQ_Kvhrk1YglDs"
+                            src="{{ asset('assets/images/umum/kades.jpg') }}"
                             alt="Muhzen Fanani Kepala Desa Sumberarum" />
                     </div>
                     <div
@@ -191,11 +192,36 @@
         </div>
     </section>
 
-    <!-- SECTION SEJARAH DESA (2 Kolom 60:40 di Desktop, Max-width 65ch Teks, Placeholder Lanskap rounded-2xl shadow-lg) -->
+    <!-- SECTION SEJARAH DESA (Diubah posisi Gambar ke Kiri, Teks ke Kanan) -->
     <section class="bg-primary text-on-primary py-section-padding px-margin-mobile md:px-gutter" id="sejarah">
         <div class="max-w-container-max mx-auto">
             <div class="flex flex-col lg:flex-row gap-10 lg:gap-14 items-center justify-between">
-                <!-- Kolom Kiri: 60% Teks Sejarah dengan max-w-[65ch] dan jarak antar paragraf yang lega -->
+
+                <!-- Kolom Kiri: 40% Placeholder Gambar / Foto Lanskap Desa -->
+                <div id="sejarah-image" class="w-full lg:w-[40%] flex justify-center">
+                    <div
+                        class="relative w-full max-w-lg lg:max-w-none group overflow-hidden rounded-2xl shadow-lg border border-white/10 bg-primary-container aspect-[4/3] sm:aspect-[16/11]">
+                        <!-- Foto Lanskap Desa -->
+                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1000&q=80"
+                            alt="Lanskap Desa Sumberarum"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent"></div>
+
+                        <!-- Overlay Keterangan Lanskap -->
+                        <div
+                            class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/20">
+                            <div
+                                class="flex items-center gap-2 text-tertiary-fixed text-xs font-bold uppercase tracking-wider mb-1">
+                                <span class="material-symbols-outlined text-base">landscape</span>
+                                <span>Lanskap Desa Sumberarum</span>
+                            </div>
+                            <p class="text-white text-xs sm:text-sm font-medium">Panorama Alam, Persawahan & Keindahan
+                                Wilayah Tempuran</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kolom Kanan: 60% Teks Sejarah dengan max-w-[65ch] -->
                 <div id="sejarah-text" class="w-full lg:w-[60%] flex flex-col gap-6 max-w-[65ch]">
                     <div class="flex items-center gap-2 text-tertiary-fixed">
                         <span class="material-symbols-outlined text-xl">history_edu</span>
@@ -228,29 +254,6 @@
                     </div>
                 </div>
 
-                <!-- Kolom Kanan: 40% Placeholder Gambar / Foto Lanskap Desa (rounded-2xl, shadow-lg) -->
-                <div id="sejarah-image" class="w-full lg:w-[40%] flex justify-center">
-                    <div
-                        class="relative w-full max-w-lg lg:max-w-none group overflow-hidden rounded-2xl shadow-lg border border-white/10 bg-primary-container aspect-[4/3] sm:aspect-[16/11]">
-                        <!-- Foto Lanskap Desa -->
-                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1000&q=80"
-                            alt="Lanskap Desa Sumberarum"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent"></div>
-
-                        <!-- Overlay Keterangan Lanskap -->
-                        <div
-                            class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/20">
-                            <div
-                                class="flex items-center gap-2 text-tertiary-fixed text-xs font-bold uppercase tracking-wider mb-1">
-                                <span class="material-symbols-outlined text-base">landscape</span>
-                                <span>Lanskap Desa Sumberarum</span>
-                            </div>
-                            <p class="text-white text-xs sm:text-sm font-medium">Panorama Alam, Persawahan & Keindahan
-                                Wilayah Tempuran</p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -390,8 +393,9 @@
             if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
                 gsap.registerPlugin(ScrollTrigger);
 
-                // Fade-in Sejarah Section
-                gsap.fromTo("#sejarah-text", {
+                // Penyesuaian Fade-in karena urutan div gambar dan teks ditukar
+                // Gambar sekarang ada di sebelah kiri (x: -30)
+                gsap.fromTo("#sejarah-image", {
                     opacity: 0,
                     x: -30
                 }, {
@@ -405,7 +409,8 @@
                     }
                 });
 
-                gsap.fromTo("#sejarah-image", {
+                // Teks sekarang ada di sebelah kanan (x: 30)
+                gsap.fromTo("#sejarah-text", {
                     opacity: 0,
                     x: 30
                 }, {
@@ -472,7 +477,7 @@
                             trigger: "#destinasi-wrapper",
                             start: "top top",
                             end: "bottom bottom",
-                            scrub: 1,
+                             scrub: 1,
                             invalidateOnRefresh: true
                         }
                     });
