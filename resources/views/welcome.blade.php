@@ -3,13 +3,18 @@
 @section('content')
     <x-navbar />
 
-    <section class="relative h-[819px] w-full flex items-center justify-center">
+    <section class="relative h-[819px] w-full flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
             <video autoplay muted loop playsinline class="w-full h-full object-cover">
                 <source src="{{ asset('assets/videos/Landing_page.mp4') }}" type="video/mp4">
             </video>
-            <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+            <!-- Overlay Gelap Utama -->
+            <div class="absolute inset-0 bg-black/20"></div>
+
+            <!-- GRADIENT FADE-OUT SMOOTH KE SECTON BAWAH (Penambahan Efek Mulus) -->
+            <div class="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-b from-transparent via-primary-container/60 to-primary-container pointer-events-none z-10"></div>
         </div>
+
         <div class="relative z-10 text-center px-6 max-w-4xl mx-auto flex flex-col items-center justify-center gap-6 py-12">
 
             <!-- Judul Hero (Ukuran Proposional & Elegant Gradient) -->
