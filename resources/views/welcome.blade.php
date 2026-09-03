@@ -265,7 +265,7 @@
             ],
             [
                 'judul' => 'Garuda Wisnu Satria Muda',
-                'deskripsi' => 'Garuda Wisnu Satria Muda adalah kelompok seni budaya yang telah mengharumkan nama Desa Sumberarum, Kecamatan Tempuran. Dengan semangat melestarikan tradisi dan budaya lokal, kelompok ini aktif dalam berbagai kegiatan seni.',
+                'deskripsi' => 'Dengan semangat melestarikan tradisi dan budaya lokal, kelompok ini aktif dalam berbagai kegiatan seni.',
                 'gambar' => asset('assets/images/destinasi/GWSM.jpg')
             ],
             [
