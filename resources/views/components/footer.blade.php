@@ -29,7 +29,7 @@
                 <a href="{{ url('/') }}" class="font-body-md text-body-md text-on-primary/75 hover:text-secondary-fixed transition-all w-fit">Beranda</a>
                 <a href="{{ url('/infografis') }}" class="font-body-md text-body-md text-on-primary/75 hover:text-secondary-fixed transition-all w-fit">Infografis</a>
                 <a href="{{ url('/petadesa') }}" class="font-body-md text-body-md text-on-primary/75 hover:text-secondary-fixed transition-all w-fit">Peta Desa</a>
-                <a href="{{ url('/layanan-informasi') }}" class="font-body-md text-body-md text-on-primary/75 hover:text-secondary-fixed transition-all w-fit">Layanan Informasi</a>
+                <a href="{{ url('/jelajah-desa') }}" class="font-body-md text-body-md text-on-primary/75 hover:text-secondary-fixed transition-all w-fit">Jelajah Desa</a>
                 <a href="{{ url('/unduh') }}" class="font-body-md text-body-md text-on-primary/75 hover:text-secondary-fixed transition-all w-fit">Unduh Peta</a>
             </div>
 
