@@ -28,15 +28,15 @@
                 Sistem Informasi Geografis & Eksplorasi Potensi Wilayah
             </p>
 
-            <!-- Tombol Aesthetic Glassmorphism -->
-            <button
+            <!-- Tombol Jelajahi Desa (Sudah diubah dari <button> ke <a> yang bernavigasi ke /jelajahdesa) -->
+            <a href="{{ url('/jelajah-desa') }}"
                 class="group relative inline-flex items-center gap-2.5 bg-white/15 hover:bg-white/25 active:scale-95 text-white border border-white/30 backdrop-blur-md px-7 py-3.5 rounded-full font-semibold text-sm md:text-base transition-all duration-300 shadow-lg hover:shadow-emerald-500/10 hover:border-white/50">
                 <span>Jelajahi Desa</span>
                 <span
                     class="material-symbols-outlined text-xl transition-transform duration-300 group-hover:translate-y-1 text-emerald-300">
                     expand_more
                 </span>
-            </button>
+            </a>
         </div>
     </section>
 
@@ -80,9 +80,8 @@
                 <div class="md:col-span-5 flex flex-col items-center justify-center mt-12 md:mt-0">
                     <div
                         class="relative w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-tertiary-fixed overflow-hidden shadow-2xl group">
-                        <!-- Mengubah sumber gambar ke folder img lokal -->
                         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                            src="{{ asset('assets/images/umum/kades.jpg') }}"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ9MHOhNPfG1Sxi-y4qBG11GZN4d9GTt4z6MbbntXR9_KfrdAzIxi8ouv9v1PuudxQ5-s8i0tki-5FEQJaDWfWxYPt0SLDM25NIdMIsGaN__JiIStnbI3QK70X7MQkxEXxQVpI7HwLEhF6tk2LC4ja1TrIuPWpmIoF2neKoYAXQh5ZrCNyK5bFQ4kszUC0id1iFn0PtC-DhiFbBscHgdY3mDAuHDEwxtljdWENh0mqxZ-KBBjBm3VyIRkjtLTPmurQ_Kvhrk1YglDs"
                             alt="Muhzen Fanani Kepala Desa Sumberarum" />
                     </div>
                     <div
@@ -196,43 +195,10 @@
         </div>
     </section>
 
-<<<<<<< HEAD
     <!-- SECTION SEJARAH DESA -->
     <section class="bg-primary text-on-primary py-section-padding px-margin-mobile md:px-gutter" id="sejarah">
         <div class="max-w-container-max mx-auto">
             <div class="flex flex-col lg:flex-row gap-10 lg:gap-14 items-center justify-between">
-=======
-    <!-- SECTION SEJARAH DESA (Diubah posisi Gambar ke Kiri, Teks ke Kanan) -->
-    <section class="bg-primary text-on-primary py-section-padding px-margin-mobile md:px-gutter" id="sejarah">
-        <div class="max-w-container-max mx-auto">
-            <div class="flex flex-col lg:flex-row gap-10 lg:gap-14 items-center justify-between">
-
-                <!-- Kolom Kiri: 40% Placeholder Gambar / Foto Lanskap Desa -->
-                <div id="sejarah-image" class="w-full lg:w-[40%] flex justify-center">
-                    <div
-                        class="relative w-full max-w-lg lg:max-w-none group overflow-hidden rounded-2xl shadow-lg border border-white/10 bg-primary-container aspect-[4/3] sm:aspect-[16/11]">
-                        <!-- Foto Lanskap Desa -->
-                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1000&q=80"
-                            alt="Lanskap Desa Sumberarum"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent"></div>
-
-                        <!-- Overlay Keterangan Lanskap -->
-                        <div
-                            class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/20">
-                            <div
-                                class="flex items-center gap-2 text-tertiary-fixed text-xs font-bold uppercase tracking-wider mb-1">
-                                <span class="material-symbols-outlined text-base">landscape</span>
-                                <span>Lanskap Desa Sumberarum</span>
-                            </div>
-                            <p class="text-white text-xs sm:text-sm font-medium">Panorama Alam, Persawahan & Keindahan
-                                Wilayah Tempuran</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Kolom Kanan: 60% Teks Sejarah dengan max-w-[65ch] -->
->>>>>>> 6f21b7fc5f357c971886ba340b36687d1246cf5e
                 <div id="sejarah-text" class="w-full lg:w-[60%] flex flex-col gap-6 max-w-[65ch]">
                     <div class="flex items-center gap-2 text-tertiary-fixed">
                         <span class="material-symbols-outlined text-xl">history_edu</span>
@@ -265,7 +231,6 @@
                     </div>
                 </div>
 
-<<<<<<< HEAD
                 <div id="sejarah-image" class="w-full lg:w-[40%] flex justify-center">
                     <div
                         class="relative w-full max-w-lg lg:max-w-none group overflow-hidden rounded-2xl shadow-lg border border-white/10 bg-primary-container aspect-[4/3] sm:aspect-[16/11]">
@@ -286,13 +251,31 @@
                         </div>
                     </div>
                 </div>
-=======
->>>>>>> 6f21b7fc5f357c971886ba340b36687d1246cf5e
             </div>
         </div>
     </section>
 
     <!-- SECTION DESTINASI WISATA -->
+    @php
+        $destinasiList = [
+            [
+                'judul' => 'Makam Ky Raden Sayyid Abdulloh',
+                'deskripsi' => 'Wisata religi dan ziarah sejarah tokoh agama terkemuka di Desa Sumberarum.',
+                'gambar' => asset('assets/images/destinasi/WisataReligi.jpeg')
+            ],
+            [
+                'judul' => 'Garuda Wisnu Satria Muda',
+                'deskripsi' => 'Garuda Wisnu Satria Muda adalah kelompok seni budaya yang telah mengharumkan nama Desa Sumberarum, Kecamatan Tempuran. Dengan semangat melestarikan tradisi dan budaya lokal, kelompok ini aktif dalam berbagai kegiatan seni.',
+                'gambar' => asset('assets/images/destinasi/GWSM.jpg')
+            ],
+            [
+                'judul' => 'Umbul Tirta Sambara',
+                'deskripsi' => 'Tirta Sambara, destinasi wisata yang menawarkan kolam air panas dengan konsep yang modern dan fasilitas yang lengkap, tempat ini menawarkan pengalaman berendam yang berbeda dari yang lain.',
+                'gambar' => asset('assets/images/destinasi/tirtasambara.jpg')
+            ],
+        ];
+    @endphp
+
     <section class="bg-primary-container text-on-primary relative w-full h-[300vh]" id="destinasi-wrapper">
         <div class="sticky top-0 h-screen w-full overflow-hidden flex flex-col pt-20 pb-10" id="destinasi-pinned">
 
@@ -305,26 +288,6 @@
                     Jelajahi keindahan tersembunyi yang ditawarkan oleh Desa Sumberarum melalui tur virtual vertikal ini.
                 </p>
             </div>
-
-            @php
-                $destinasiList = [
-                    [
-                        'judul' => 'Makam Ky Raden Sayyid Abdulloh',
-                        'deskripsi' => 'Wisata religi dan ziarah sejarah tokoh agama terkemuka di Desa Sumberarum.',
-                        'gambar' => asset('assets/images/destinasi/WisataReligi.jpeg')
-                    ],
-                    [
-                        'judul' => 'Destinasi Wisata 2',
-                        'deskripsi' => 'Nikmati pemandangan alam dan keindahan persawahan Desa Sumberarum.',
-                        'gambar' => 'https://picsum.photos/seed/wisatabaru2/600/500'
-                    ],
-                    [
-                        'judul' => 'Destinasi Wisata 3',
-                        'deskripsi' => 'Jelajahi potensi kebudayaan dan kearifan lokal warga desa.',
-                        'gambar' => 'https://picsum.photos/seed/wisatabaru3/600/500'
-                    ],
-                ];
-            @endphp
 
             <div class="relative w-full h-full flex items-center justify-center mt-12 md:mt-16" id="cards-container">
                 @foreach ($destinasiList as $index => $item)
@@ -362,9 +325,10 @@
             </div>
 
             <div class="absolute right-6 top-1/2 -translate-y-1/2 flex flex-col gap-4 z-50">
-                @for ($i = 1; $i <= 3; $i++)
+                @foreach ($destinasiList as $index => $item)
+                    @php $i = $index + 1; @endphp
                     <div class="w-3 h-3 rounded-full bg-[#FFF9E6]/30 dest-dot" id="dest-dot-{{ $i }}"></div>
-                @endfor
+                @endforeach
             </div>
         </div>
     </section>
@@ -450,9 +414,8 @@
             if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
                 gsap.registerPlugin(ScrollTrigger);
 
-                // Penyesuaian Fade-in karena urutan div gambar dan teks ditukar
-                // Gambar sekarang ada di sebelah kiri (x: -30)
-                gsap.fromTo("#sejarah-image", {
+                // Fade-in Sejarah Section
+                gsap.fromTo("#sejarah-text", {
                     opacity: 0,
                     x: -30
                 }, {
@@ -466,8 +429,7 @@
                     }
                 });
 
-                // Teks sekarang ada di sebelah kanan (x: 30)
-                gsap.fromTo("#sejarah-text", {
+                gsap.fromTo("#sejarah-image", {
                     opacity: 0,
                     x: 30
                 }, {
@@ -534,7 +496,7 @@
                             trigger: "#destinasi-wrapper",
                             start: "top top",
                             end: "bottom bottom",
-                             scrub: 1,
+                            scrub: 1,
                             invalidateOnRefresh: true
                         }
                     });
