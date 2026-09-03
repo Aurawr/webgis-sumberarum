@@ -33,10 +33,10 @@
                     <span class="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 rounded-full transition-all duration-300 nav-underline {{ request()->is('petadesa') ? 'w-12' : 'w-0 group-hover:w-12' }}"></span>
                 </a>
 
-                <a href="{{ url('/layanan-informasi') }}"
-                    class="nav-link relative px-4 py-2 text-[15px] {{ request()->is('layanan-informasi') ? 'font-semibold' : 'font-medium' }} transition-all duration-500 group">
-                    <span class="relative z-10 drop-shadow-md">Layanan Informasi</span>
-                    <span class="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 rounded-full transition-all duration-300 nav-underline {{ request()->is('layanan-informasi') ? 'w-12' : 'w-0 group-hover:w-12' }}"></span>
+                <a href="{{ url('/jelajah-desa') }}"
+                    class="nav-link relative px-4 py-2 text-[15px] {{ request()->is('jelajah-desa') ? 'font-semibold' : 'font-medium' }} transition-all duration-500 group">
+                    <span class="relative z-10 drop-shadow-md">Jelajah Desa</span>
+                    <span class="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 rounded-full transition-all duration-300 nav-underline {{ request()->is('jelajah-desa') ? 'w-12' : 'w-0 group-hover:w-12' }}"></span>
                 </a>
 
                 <a href="{{ url('/unduh') }}"
@@ -62,7 +62,7 @@
             <a href="{{ url('/') }}" class="px-4 py-4 text-[16px] {{ request()->is('/') ? 'font-semibold text-gray-900 dark:text-white bg-gray-900/5 dark:bg-white/10' : 'font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white' }} hover:bg-gray-900/5 dark:hover:bg-white/10 rounded-lg transition-all duration-200 backdrop-blur-sm">Beranda</a>
             <a href="{{ url('/infografis') }}" class="px-4 py-4 text-[16px] {{ request()->is('infografis') ? 'font-semibold text-gray-900 dark:text-white bg-gray-900/5 dark:bg-white/10' : 'font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white' }} hover:bg-gray-900/5 dark:hover:bg-white/10 rounded-lg transition-all duration-200 backdrop-blur-sm">Infografis</a>
             <a href="{{ url('/petadesa') }}" class="px-4 py-4 text-[16px] {{ request()->is('petadesa') ? 'font-semibold text-gray-900 dark:text-white bg-gray-900/5 dark:bg-white/10' : 'font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white' }} hover:bg-gray-900/5 dark:hover:bg-white/10 rounded-lg transition-all duration-200 backdrop-blur-sm">Peta Desa</a>
-            <a href="{{ url('/layanan-informasi') }}" class="px-4 py-4 text-[16px] {{ request()->is('layanan-informasi') ? 'font-semibold text-gray-900 dark:text-white bg-gray-900/5 dark:bg-white/10' : 'font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white' }} hover:bg-gray-900/5 dark:hover:bg-white/10 rounded-lg transition-all duration-200 backdrop-blur-sm">Layanan Informasi</a>
+            <a href="{{ url('/jelajah-desa') }}" class="px-4 py-4 text-[16px] {{ request()->is('jelajah-desa') ? 'font-semibold text-gray-900 dark:text-white bg-gray-900/5 dark:bg-white/10' : 'font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white' }} hover:bg-gray-900/5 dark:hover:bg-white/10 rounded-lg transition-all duration-200 backdrop-blur-sm">Jelajah Desa</a>
             <a href="{{ url('/unduh') }}" class="px-4 py-4 text-[16px] {{ request()->is('unduh') ? 'font-semibold text-gray-900 dark:text-white bg-gray-900/5 dark:bg-white/10' : 'font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white' }} hover:bg-gray-900/5 dark:hover:bg-white/10 rounded-lg transition-all duration-200 backdrop-blur-sm">Unduh Peta</a>
         </nav>
     </div>
