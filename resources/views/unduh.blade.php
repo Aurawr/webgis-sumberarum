@@ -4,97 +4,112 @@
 <x-navbar />
 
 @php
-    // Daftar peta PDF. Taruh file PDF-nya di: public/dokumen/peta-unduh/
-    // lalu isi 'file' dengan nama file tersebut.
-    $dokumenPeta = [
-        [
-            'judul' => 'Peta Foto Udara Sumberarum',
-            'deskripsi' => 'Peta citra satelit dan foto udara resolusi tinggi wilayah Desa Sumberarum tahun 2025.',
-            'file' => 'Sumberarum_Dasar_Peta_Citra.pdf',
-        ],
-        [
-            'judul' => 'Peta Penggunaan Lahan Sumberarum',
-            'deskripsi' => 'Peta tematik yang menunjukkan klasifikasi penggunaan lahan dan vegetasi.',
-            'file' => 'Sumberarum_Dasar_Peta_Penggunaan_Lahan.pdf',
-        ],
-        [
-            'judul' => 'Peta Bangunan Sumberarum',
-            'deskripsi' => 'Peta persebaran dan lokasi bangunan yang terdapat di wilayah Desa Sumberarum.',
-            'file' => 'Sumberarum_Dasar_Peta_Bangunan.pdf',
-        ],
-        [
-            'judul' => 'Peta Sarana dan Prasarana Sumberarum',
-            'deskripsi' => 'Peta persebaran sarana dan prasarana yang tersedia di wilayah Desa Sumberarum.',
-            'file' => 'Sumberarum_Dasar_Peta_Sarana_dan_Prasarana.pdf',
-        ],
+    // ────────────────────────────────────────────────────────────────
+    // 1. PETA SKALA DESA — judul & deskripsi ditulis manual
+    //    File PDF: public/dokumen/peta-unduh/
+    // ────────────────────────────────────────────────────────────────
+    $petaDesa = [
+        ['judul' => 'Peta Foto Udara',            'file' => 'Sumberarum_Dasar_Peta_Citra.pdf',                  'deskripsi' => 'Citra satelit dan foto udara resolusi tinggi wilayah Desa Sumberarum tahun 2025.'],
+        ['judul' => 'Peta Penggunaan Lahan',      'file' => 'Sumberarum_Dasar_Peta_Penggunaan_Lahan.pdf',       'deskripsi' => 'Klasifikasi penggunaan lahan dan vegetasi se-Desa Sumberarum.'],
+        ['judul' => 'Peta Bangunan',              'file' => 'Sumberarum_Dasar_Peta_Bangunan.pdf',               'deskripsi' => 'Persebaran dan lokasi bangunan di wilayah Desa Sumberarum.'],
+        ['judul' => 'Peta Sarana dan Prasarana',  'file' => 'Sumberarum_Dasar_Peta_Sarana_dan_Prasarana.pdf',   'deskripsi' => 'Persebaran sarana dan prasarana yang tersedia di Desa Sumberarum.'],
     ];
+
+    // ────────────────────────────────────────────────────────────────
+    // 2. PETA PER DUSUN — cukup tambah baris "Nama Dusun => nama-file.pdf"
+    //    Judul & deskripsi dibuat otomatis.
+    // ────────────────────────────────────────────────────────────────
+    $fileDusun = [
+        'Boto'          => 'Boto_A1.pdf',
+        'Dasekan'       => 'Dasekan_A1.pdf',
+        'Dimajar 1'     => 'Dimajar1_A1.pdf',
+        'Dimajar 2'     => 'Dimajar2_A1.pdf',
+        'Dimajar 3'     => 'Dimajar3_A1.pdf',
+        'Gunung Bakal'  => 'GunungBakal_A1.pdf',
+        'Kasuran'       => 'Kasuran_A1.pdf',
+        'Kerban'        => 'Kerban_A1.pdf',
+        'Pakeron'       => 'Pakeron_A1.pdf',
+        'Sadegan'       => 'Sadegan_A1.pdf',
+        'Sumber'        => 'Sumber_A1.pdf',
+        'Tegalsari'     => 'Tegalsari_A1.pdf',
+        'Teluk'         => 'Teluk_A1.pdf',
+        'Tepungsari'    => 'Tepungsari_A1.pdf',
+        'Wareng'        => 'Wareng_A1.pdf',
+    ];
+
+    $petaDusun = collect($fileDusun)
+        ->map(fn ($file, $nama) => [
+            'judul'     => 'Peta Penutup dan Penggunaan Lahan',
+            'deskripsi' => "Persebaran dan jenis penutup serta penggunaan lahan di wilayah Dusun {$nama}.",
+            'file'      => $file,
+            'dusun'     => $nama,
+        ])
+        ->values()
+        ->all();
 @endphp
 
-<!-- Wrapper dengan warna hijau tua (primary) -->
 <section class="bg-primary min-h-screen pt-28 pb-16 md:pt-36 md:pb-20 px-margin-mobile md:px-gutter">
     <div class="max-w-container-max mx-auto">
 
-        <!-- Header -->
-        <div class="mb-12">
+        <header class="mb-14">
             <h1 class="text-5xl md:text-6xl font-extrabold text-tertiary-fixed border-b-4 border-tertiary-fixed inline-block pb-3 mb-4">
                 Unduh Peta
             </h1>
-            <p class="text-lg text-tertiary-fixed/80">Koleksi peta tematik dan dokumen yang dapat Anda lihat serta unduh.</p>
+            <p class="text-lg text-tertiary-fixed/80 max-w-2xl">
+                Peta dibagi dua: peta seluruh desa dan peta tiap dusun. Klik gambar untuk melihat, atau unduh berkas PDF-nya.
+            </p>
+        </header>
+
+        {{-- ══════════════ BAGIAN 1: PETA SE-DESA ══════════════ --}}
+        <div class="flex items-baseline gap-4 mb-6">
+            <h2 class="text-2xl md:text-3xl font-extrabold text-tertiary-fixed">Peta Seluruh Desa</h2>
+            <span class="text-tertiary-fixed/60 text-sm">{{ count($petaDesa) }} peta</span>
         </div>
 
-        <!-- Grid Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            @foreach($dokumenPeta as $doc)
-            @php
-                $fileUrl = asset('dokumen/peta-unduh/' . $doc['file']);
-            @endphp
-            <!-- Kartu dengan warna krem (tertiary-fixed) -->
-            <div class="bg-tertiary-fixed rounded-2xl overflow-hidden shadow-xl flex flex-col border border-white/20 transform transition-transform duration-300 hover:-translate-y-1">
-
-                <!-- Preview Halaman 1 PDF (di-render otomatis oleh PDF.js) & Efek Hover -->
-                <a href="{{ $fileUrl }}" target="_blank" rel="noopener" class="pdf-thumb-wrap relative group aspect-[4/3] overflow-hidden bg-gray-100 cursor-pointer block">
-                    <canvas class="pdf-thumb absolute inset-0 w-full h-full object-contain transition-transform duration-700 group-hover:scale-110" data-pdf-url="{{ $fileUrl }}"></canvas>
-
-                    <!-- Fallback ikon, muncul kalau render PDF gagal -->
-                    <div class="pdf-thumb-fallback hidden absolute inset-0 items-center justify-center bg-primary/10">
-                        <span class="material-symbols-outlined text-primary/40" style="font-size:72px;">picture_as_pdf</span>
-                    </div>
-
-                    <!-- Overlay Gelap saat di-hover -->
-                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-white backdrop-blur-[2px]">
-                        <span class="font-extrabold text-xl mb-4 text-center px-4 drop-shadow-md">{{ $doc['judul'] }}</span>
-                        <div class="w-14 h-14 rounded-full border-2 border-white/50 bg-white/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                            <span class="material-symbols-outlined text-3xl">zoom_in</span>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Informasi & Tombol Aksi -->
-                <div class="p-6 flex flex-col flex-grow">
-                    <h3 class="text-xl font-bold text-primary mb-2">{{ $doc['judul'] }}</h3>
-                    <p class="text-sm text-primary/80 mb-6 flex-grow leading-relaxed">{{ $doc['deskripsi'] }}</p>
-
-                    <div class="flex flex-col gap-3 mt-auto">
-                        <!-- Tombol Unduh (Outline Putih/Krem Transparan) -->
-                        <a href="{{ $fileUrl }}" download
-                           class="w-full py-2.5 px-4 bg-white/40 hover:bg-white text-primary border border-primary/20 font-bold rounded-xl transition-all duration-300 flex justify-center items-center gap-2 shadow-sm">
-                            <span class="material-symbols-outlined text-[20px]">download</span> Unduh Data
-                        </a>
-
-                        <!-- Tombol Lihat Dokumen (Solid Hijau) -->
-                        <a href="{{ $fileUrl }}" target="_blank" rel="noopener"
-                           class="w-full py-2.5 px-4 bg-primary/10 hover:bg-primary hover:text-white text-primary font-bold rounded-xl transition-all duration-300 flex justify-center items-center gap-2">
-                            <span class="material-symbols-outlined text-[20px]">visibility</span> Lihat Dokumen
-                        </a>
-                    </div>
-                </div>
-
-            </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+            @foreach ($petaDesa as $doc)
+                @include('components.kartu-peta', ['doc' => $doc])
             @endforeach
         </div>
 
+        {{-- ══════════════ BAGIAN 2: PETA PER DUSUN ══════════════ --}}
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-6">
+            <div>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-tertiary-fixed">Peta Per Dusun</h2>
+                <p class="text-tertiary-fixed/70 text-sm mt-1">Nama dusun tercantum di pojok kiri atas tiap peta.</p>
+            </div>
+
+            <label class="relative w-full md:w-72">
+                <span class="sr-only">Cari dusun</span>
+                <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-tertiary-fixed/60 text-[20px]">search</span>
+                <input id="cariDusun" type="search" autocomplete="off" placeholder="Ketik nama dusun…"
+                       class="w-full pl-11 pr-4 py-2.5 rounded-xl bg-tertiary-fixed/10 border border-tertiary-fixed/30 text-tertiary-fixed placeholder-tertiary-fixed/50 focus:outline-none focus:ring-2 focus:ring-tertiary-fixed/60">
+            </label>
+        </div>
+
+        {{-- Pintasan: lompat ke kartu dusun tertentu --}}
+        <div class="flex flex-wrap gap-2 mb-8">
+            @foreach ($petaDusun as $doc)
+                <a href="#dusun-{{ Str::slug($doc['dusun']) }}"
+                   class="px-3 py-1.5 rounded-full text-sm font-semibold bg-tertiary-fixed/10 text-tertiary-fixed border border-tertiary-fixed/30 hover:bg-tertiary-fixed hover:text-primary transition-colors">
+                    {{ $doc['dusun'] }}
+                </a>
+            @endforeach
+        </div>
+
+        <div id="gridDusun" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            @foreach ($petaDusun as $doc)
+                @include('components.kartu-peta', ['doc' => $doc])
+            @endforeach
+        </div>
+
+        <p id="dusunKosong" class="hidden text-tertiary-fixed/70 py-10">
+            Tidak ada dusun dengan nama itu. Coba kata yang lebih pendek, misalnya “dim”.
+        </p>
+
     </div>
 </section>
+
 <x-footer />
 
 @push('scripts')
@@ -104,44 +119,56 @@
         'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 
     function renderPdfThumb(canvas) {
-        const url = canvas.dataset.pdfUrl;
+        const url  = canvas.dataset.pdfUrl;
+        const wrap = canvas.closest('.pdf-thumb-wrap');
 
         pdfjsLib.getDocument(url).promise
             .then((pdf) => pdf.getPage(1))
             .then((page) => {
-                const wrap = canvas.closest('.pdf-thumb-wrap');
-                const scale = wrap.clientWidth / page.getViewport({ scale: 1 }).width;
+                const dpr      = Math.min(window.devicePixelRatio || 1, 2);
+                const scale    = (wrap.clientWidth / page.getViewport({ scale: 1 }).width) * dpr;
                 const viewport = page.getViewport({ scale });
 
-                canvas.width = viewport.width;
+                canvas.width  = viewport.width;
                 canvas.height = viewport.height;
 
-                const ctx = canvas.getContext('2d');
-                return page.render({ canvasContext: ctx, viewport }).promise;
+                return page.render({ canvasContext: canvas.getContext('2d'), viewport }).promise;
             })
             .catch((err) => {
                 console.error('Gagal memuat preview PDF:', url, err);
                 canvas.classList.add('hidden');
-                canvas.closest('.pdf-thumb-wrap')
-                    .querySelector('.pdf-thumb-fallback')
-                    .classList.remove('hidden');
-                canvas.closest('.pdf-thumb-wrap')
-                    .querySelector('.pdf-thumb-fallback')
-                    .classList.add('flex');
+                wrap.querySelector('.pdf-thumb-fallback').classList.replace('hidden', 'flex');
             });
     }
 
-    // Render tiap thumbnail hanya saat kartunya masuk viewport (hemat kinerja)
+    // Render pratinjau hanya saat kartu mendekati layar
     const thumbObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                renderPdfThumb(entry.target);
-                observer.unobserve(entry.target);
-            }
+            if (!entry.isIntersecting) return;
+            renderPdfThumb(entry.target);
+            observer.unobserve(entry.target);
         });
     }, { rootMargin: '200px' });
 
-    document.querySelectorAll('.pdf-thumb').forEach((canvas) => thumbObserver.observe(canvas));
+    document.querySelectorAll('.pdf-thumb').forEach((c) => thumbObserver.observe(c));
+
+    // Pencarian dusun
+    const input  = document.getElementById('cariDusun');
+    const kartu  = Array.from(document.querySelectorAll('#gridDusun [data-dusun]'));
+    const kosong = document.getElementById('dusunKosong');
+
+    input?.addEventListener('input', () => {
+        const q = input.value.trim().toLowerCase();
+        let terlihat = 0;
+
+        kartu.forEach((el) => {
+            const cocok = el.dataset.dusun.includes(q);
+            el.classList.toggle('hidden', !cocok);
+            if (cocok) terlihat++;
+        });
+
+        kosong.classList.toggle('hidden', terlihat > 0);
+    });
 </script>
 @endpush
 @endsection
