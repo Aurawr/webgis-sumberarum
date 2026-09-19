@@ -5,8 +5,7 @@
 
 @php
     // ────────────────────────────────────────────────────────────────
-    // 1. PETA SKALA DESA — judul & deskripsi ditulis manual
-    //    File PDF: public/dokumen/peta-unduh/
+    // 1. PETA SKALA DESA
     // ────────────────────────────────────────────────────────────────
     $petaDesa = [
         ['judul' => 'Peta Foto Udara',            'file' => 'Sumberarum_Dasar_Peta_Citra.pdf',                  'deskripsi' => 'Citra satelit dan foto udara resolusi tinggi wilayah Desa Sumberarum tahun 2025.'],
@@ -16,8 +15,7 @@
     ];
 
     // ────────────────────────────────────────────────────────────────
-    // 2. PETA PER DUSUN — cukup tambah baris "Nama Dusun => nama-file.pdf"
-    //    Judul & deskripsi dibuat otomatis.
+    // 2. PETA PER DUSUN
     // ────────────────────────────────────────────────────────────────
     $fileDusun = [
         'Boto'          => 'Boto_A1.pdf',
@@ -55,9 +53,6 @@
             <h1 class="text-5xl md:text-6xl font-extrabold text-tertiary-fixed border-b-4 border-tertiary-fixed inline-block pb-3 mb-4">
                 Unduh Peta
             </h1>
-            <p class="text-lg text-tertiary-fixed/80 max-w-2xl">
-                Peta dibagi dua: peta seluruh desa dan peta tiap dusun. Klik gambar untuk melihat, atau unduh berkas PDF-nya.
-            </p>
         </header>
 
         {{-- ══════════════ BAGIAN 1: PETA SE-DESA ══════════════ --}}
