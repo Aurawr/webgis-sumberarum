@@ -61,14 +61,14 @@
                                 <span class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-1 rounded-full">Dusun</span>
                             </div>
 
+                            <!-- Deskripsi sudah diperbarui -->
                             <p class="font-body-md text-on-surface-variant text-sm mb-4">
-                                Informasi profil wilayah, potensi lokal, serta dokumentasi kegiatan warga Dusun {{ $dusun['name'] }}.
+                                Informasi profil wilayah dan potensi lokal Dusun {{ $dusun['name'] }}.
                             </p>
 
                             <!-- YouTube Embed Preview -->
                             @if($dusun['yt_id'])
                                 <div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-surface-variant border border-white/10 mb-4">
-                                    <!-- Menambahkan loading="lazy" agar browser tidak memuat 14 video sekaligus -->
                                     <iframe 
                                         class="absolute top-0 left-0 w-full h-full" 
                                         src="https://www.youtube.com/embed/{{ $dusun['yt_id'] }}" 
