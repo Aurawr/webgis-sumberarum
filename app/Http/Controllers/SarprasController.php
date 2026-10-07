@@ -17,14 +17,10 @@ class SarprasController extends Controller
                 'kelas',
                 'toponim',
                 DB::raw('ST_AsGeoJSON(
-                    ST_Centroid(
-                        CASE
-                            WHEN ST_SRID(geom) = 4326 THEN geom
-                            WHEN ST_SRID(geom) = 32749 THEN ST_Transform(geom, 4326)
-                            WHEN ST_X(ST_Centroid(geom)) > 1000 THEN ST_Transform(ST_SetSRID(geom, 32749), 4326)
-                            ELSE ST_SetSRID(geom, 4326)
-                        END
-                    )
+                    CASE
+                        WHEN ST_X(ST_Centroid(geom)) > 180 THEN ST_Transform(ST_SetSRID(geom, 32749), 4326)
+                        ELSE ST_SetSRID(geom, 4326)
+                    END
                 ) as geom')
             )
             ->get();

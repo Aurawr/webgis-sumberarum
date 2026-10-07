@@ -13,11 +13,17 @@ class WisataController extends Controller
     public function index()
     {
         $data = DB::table('wisata_sumberarum')
+            ->whereNotNull('geom')
             ->select(
                 'id',
                 'nama_wisata',
                 'dusun',
-                DB::raw('ST_AsGeoJSON(geom) as geom')
+                DB::raw('ST_AsGeoJSON(
+                    CASE
+                        WHEN ST_X(ST_Centroid(geom)) > 180 THEN ST_Transform(ST_SetSRID(geom, 32749), 4326)
+                        ELSE ST_SetSRID(geom, 4326)
+                    END
+                ) as geom')
             )
             ->get();
 
