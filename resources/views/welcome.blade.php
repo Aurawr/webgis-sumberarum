@@ -12,7 +12,9 @@
             <div class="absolute inset-0 bg-black/20"></div>
 
             <!-- GRADIENT FADE-OUT SMOOTH KE SECTION BAWAH -->
-            <div class="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-b from-transparent via-primary-container/60 to-primary-container pointer-events-none z-10"></div>
+            <div
+                class="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-b from-transparent via-primary-container/60 to-primary-container pointer-events-none z-10">
+            </div>
         </div>
 
         <div class="relative z-10 text-center px-6 max-w-4xl mx-auto flex flex-col items-center justify-center gap-6 py-12">
@@ -81,8 +83,7 @@
                     <div
                         class="relative w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-tertiary-fixed overflow-hidden shadow-2xl group">
                         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ9MHOhNPfG1Sxi-y4qBG11GZN4d9GTt4z6MbbntXR9_KfrdAzIxi8ouv9v1PuudxQ5-s8i0tki-5FEQJaDWfWxYPt0SLDM25NIdMIsGaN__JiIStnbI3QK70X7MQkxEXxQVpI7HwLEhF6tk2LC4ja1TrIuPWpmIoF2neKoYAXQh5ZrCNyK5bFQ4kszUC0id1iFn0PtC-DhiFbBscHgdY3mDAuHDEwxtljdWENh0mqxZ-KBBjBm3VyIRkjtLTPmurQ_Kvhrk1YglDs"
-                            alt="Muhzen Fanani Kepala Desa Sumberarum" />
+                            src="/assets/images/umum/kades.jpg" alt="Muhzen Fanani Kepala Desa Sumberarum" />
                     </div>
                     <div
                         class="bg-surface/10 backdrop-blur-md border border-white/20 mt-6 px-8 py-3.5 rounded-xl text-center shadow-lg">
@@ -234,9 +235,13 @@
                 <div id="sejarah-image" class="w-full lg:w-[40%] flex justify-center">
                     <div
                         class="relative w-full max-w-lg lg:max-w-none group overflow-hidden rounded-2xl shadow-lg border border-white/10 bg-primary-container aspect-[4/3] sm:aspect-[16/11]">
-                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1000&q=80"
-                            alt="Lanskap Desa Sumberarum"
+
+                        <video autoplay loop muted playsinline
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <source src="/assets/videos/Sungai.mp4" type="video/mp4">
+                            Browser Anda tidak mendukung pemutaran video.
+                        </video>
+
                         <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent"></div>
 
                         <div
@@ -261,17 +266,19 @@
             [
                 'judul' => 'Makam Ky Raden Sayyid Abdulloh',
                 'deskripsi' => 'Wisata religi dan ziarah sejarah tokoh agama terkemuka di Desa Sumberarum.',
-                'gambar' => asset('assets/images/destinasi/WisataReligi.jpeg')
+                'gambar' => asset('assets/images/destinasi/WisataReligi.jpeg'),
             ],
             [
                 'judul' => 'Garuda Wisnu Satria Muda',
-                'deskripsi' => 'Dengan semangat melestarikan tradisi dan budaya lokal, kelompok ini aktif dalam berbagai kegiatan seni.',
-                'gambar' => asset('assets/images/destinasi/GWSM.jpg')
+                'deskripsi' =>
+                    'Dengan semangat melestarikan tradisi dan budaya lokal, kelompok ini aktif dalam berbagai kegiatan seni.',
+                'gambar' => asset('assets/images/destinasi/GWSM.jpg'),
             ],
             [
                 'judul' => 'Umbul Tirta Sambara',
-                'deskripsi' => 'Tirta Sambara, destinasi wisata yang menawarkan kolam air panas dengan konsep yang modern dan fasilitas yang lengkap, tempat ini menawarkan pengalaman berendam yang berbeda dari yang lain.',
-                'gambar' => asset('assets/images/destinasi/tirtasambara.jpg')
+                'deskripsi' =>
+                    'Destinasi wisata yang menawarkan kolam air panas dengan konsep yang modern dan fasilitas yang lengkap.',
+                'gambar' => asset('assets/images/destinasi/tirtasambara.jpg'),
             ],
         ];
     @endphp
@@ -280,11 +287,11 @@
         <div class="sticky top-0 h-screen w-full overflow-hidden flex flex-col pt-20 pb-10" id="destinasi-pinned">
 
             <div
-                class="px-margin-mobile md:px-gutter max-w-container-max mx-auto w-full z-50 absolute top-24 left-1/2 -translate-x-1/2 text-center md:text-left pointer-events-none">
+                class="px-margin-mobile md:px-gutter max-w-container-max mx-auto w-full z-45 absolute top-32 left-1/2 -translate-x-1/2 text-center md:text-left pointer-events-none">
                 <h2
                     class="font-headline-xl text-headline-xl text-tertiary-fixed font-bold pointer-events-auto drop-shadow-md">
                     Destinasi Wisata</h2>
-                <p class="font-body-lg text-body-lg text-on-primary/90 mt-4 max-w-2xl mx-auto md:mx-0 pointer-events-auto">
+                <p class="font-body-lg text-body-lg text-on-primary/90 mt-1.5 whitespace-nowrap pointer-events-auto">
                     Jelajahi keindahan tersembunyi yang ditawarkan oleh Desa Sumberarum melalui tur virtual vertikal ini.
                 </p>
             </div>
@@ -307,8 +314,7 @@
 
                             <div
                                 class="rounded-xl overflow-hidden h-[280px] md:h-[320px] w-full shrink-0 shadow-inner relative bg-black/10">
-                                <img src="{{ $item['gambar'] }}"
-                                    alt="{{ $item['judul'] }}"
+                                <img src="{{ $item['gambar'] }}" alt="{{ $item['judul'] }}"
                                     class="w-full h-full object-cover pointer-events-none">
                             </div>
                             <div class="px-2 pb-2 pt-4 text-primary">
