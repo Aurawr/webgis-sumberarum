@@ -284,44 +284,45 @@
     @endphp
 
     <section class="bg-primary-container text-on-primary relative w-full h-[300vh]" id="destinasi-wrapper">
-        <div class="sticky top-0 h-screen w-full overflow-hidden flex flex-col pt-20 pb-10" id="destinasi-pinned">
+        <div class="sticky top-0 h-screen w-full overflow-hidden flex flex-col pt-12 md:pt-16 pb-6" id="destinasi-pinned">
 
-            <div
-                class="px-margin-mobile md:px-gutter max-w-container-max mx-auto w-full z-45 absolute top-32 left-1/2 -translate-x-1/2 text-center md:text-left pointer-events-none">
-                <h2
-                    class="font-headline-xl text-headline-xl text-tertiary-fixed font-bold pointer-events-auto drop-shadow-md">
-                    Destinasi Wisata</h2>
-                <p class="font-body-lg text-body-lg text-on-primary/90 mt-1.5 whitespace-nowrap pointer-events-auto">
+            <!-- Title Header in normal flow so it stays cleanly at top without overlapping cards -->
+            <div class="px-margin-mobile md:px-gutter max-w-container-max mx-auto w-full z-45 text-center md:text-left shrink-0">
+                <h2 class="font-headline-xl text-3xl sm:text-4xl md:text-5xl text-tertiary-fixed font-bold drop-shadow-md">
+                    Destinasi Wisata
+                </h2>
+                <p class="font-body-lg text-sm sm:text-base md:text-lg text-on-primary/90 mt-2 max-w-2xl">
                     Jelajahi keindahan tersembunyi yang ditawarkan oleh Desa Sumberarum melalui tur virtual vertikal ini.
                 </p>
             </div>
 
-            <div class="relative w-full h-full flex items-center justify-center mt-12 md:mt-16" id="cards-container">
+            <!-- Cards Container takes remaining vertical space below header -->
+            <div class="relative w-full flex-1 flex items-center justify-center min-h-0" id="cards-container">
                 @foreach ($destinasiList as $index => $item)
                     @php $i = $index + 1; @endphp
-                    <div class="destinasi-card absolute top-1/2 left-1/2 w-[280px] md:w-[340px]"
+                    <div class="destinasi-card absolute top-1/2 left-1/2 w-[280px] sm:w-[320px] md:w-[340px]"
                         id="destinasi-card-{{ $i }}">
                         <div
-                            class="h-full flex flex-col relative bg-[#FFF9E6] rounded-[1.5rem] p-5 shadow-2xl border border-white/20">
-                            <svg class="sparkle absolute -top-8 -right-8 w-14 h-14 text-[#FFF9E6] z-30 drop-shadow-lg"
+                            class="h-full flex flex-col relative bg-[#FFF9E6] rounded-[1.5rem] p-4 sm:p-5 shadow-2xl border border-white/20">
+                            <svg class="sparkle absolute -top-6 -right-6 md:-top-8 md:-right-8 w-10 h-10 md:w-14 md:h-14 text-[#FFF9E6] z-30 drop-shadow-lg"
                                 viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" />
                             </svg>
-                            <svg class="sparkle absolute -bottom-8 -left-8 w-16 h-16 text-[#FFF9E6] z-30 drop-shadow-lg"
+                            <svg class="sparkle absolute -bottom-6 -left-6 md:-bottom-8 md:-left-8 w-12 h-12 md:w-16 md:h-16 text-[#FFF9E6] z-30 drop-shadow-lg"
                                 viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" />
                             </svg>
 
                             <div
-                                class="rounded-xl overflow-hidden h-[280px] md:h-[320px] w-full shrink-0 shadow-inner relative bg-black/10">
+                                class="rounded-xl overflow-hidden h-[220px] sm:h-[260px] md:h-[280px] w-full shrink-0 shadow-inner relative bg-black/10">
                                 <img src="{{ $item['gambar'] }}" alt="{{ $item['judul'] }}"
                                     class="w-full h-full object-cover pointer-events-none">
                             </div>
-                            <div class="px-2 pb-2 pt-4 text-primary">
-                                <h3 class="font-headline-lg text-[22px] font-bold mb-2">
+                            <div class="px-1 pb-1 pt-3 text-primary">
+                                <h3 class="font-headline-lg text-lg sm:text-xl md:text-[22px] font-bold mb-1.5 leading-snug">
                                     {{ $item['judul'] }}
                                 </h3>
-                                <p class="font-body-md text-sm text-primary/80">
+                                <p class="font-body-md text-xs sm:text-sm text-primary/80 line-clamp-3">
                                     {{ $item['deskripsi'] }}
                                 </p>
                             </div>
@@ -460,7 +461,11 @@
                 });
 
                 if (cards.length === 3) {
-                    const getOffset = () => window.innerWidth > 768 ? 450 : 310;
+                    const getOffset = () => {
+                        if (window.innerWidth > 1280) return 380;
+                        if (window.innerWidth > 768) return 320;
+                        return 240;
+                    };
 
                     // Initial State
                     gsap.set(cards[0], {
