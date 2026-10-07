@@ -26,7 +26,6 @@
 
             @php
                 // Daftar Dusun dengan ID YouTube dan Link
-                // Biarkan Pakeron bernilai null, nanti tinggal diisi ID dan linknya.
                 $dusunList = [
                     ['name' => 'Boto', 'yt_id' => 'UF89s-ro0TA', 'yt_link' => 'https://youtu.be/UF89s-ro0TA'],
                     ['name' => 'Desekan', 'yt_id' => '4bF9l-9NU0A', 'yt_link' => 'https://youtu.be/4bF9l-9NU0A'],
@@ -36,7 +35,7 @@
                     ['name' => 'Gunung Bakal', 'yt_id' => 'Gbp0adyFRYI', 'yt_link' => 'https://youtu.be/Gbp0adyFRYI'],
                     ['name' => 'Kasuran', 'yt_id' => 'PYQ9H0DnDc0', 'yt_link' => 'https://youtu.be/PYQ9H0DnDc0'],
                     ['name' => 'Kerban', 'yt_id' => 'o4JDLOp_86o', 'yt_link' => 'https://youtu.be/o4JDLOp_86o'],
-                    ['name' => 'Pakeron', 'yt_id' => null, 'yt_link' => null], // <-- Nanti isi di sini
+                    ['name' => 'Pakeron', 'yt_id' => 'YN380Q9bdUo', 'yt_link' => 'https://youtu.be/YN380Q9bdUo'],
                     ['name' => 'Sadegan', 'yt_id' => 'mrG9MZU3vfM', 'yt_link' => 'https://youtu.be/mrG9MZU3vfM'],
                     ['name' => 'Sumber', 'yt_id' => 'G9N_vgMIHWQ', 'yt_link' => 'https://youtu.be/G9N_vgMIHWQ'],
                     ['name' => 'Tegalsari', 'yt_id' => 'oKzBF7VWUOQ', 'yt_link' => 'https://youtu.be/oKzBF7VWUOQ'],
@@ -61,7 +60,7 @@
                                 <span class="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-1 rounded-full">Dusun</span>
                             </div>
 
-                            <!-- Deskripsi sudah diperbarui -->
+                            <!-- Deskripsi -->
                             <p class="font-body-md text-on-surface-variant text-sm mb-4">
                                 Informasi profil wilayah dan potensi lokal Dusun {{ $dusun['name'] }}.
                             </p>
@@ -81,7 +80,7 @@
                                     </iframe>
                                 </div>
                             @else
-                                <!-- Placeholder untuk Pakeron (Video belum ada) -->
+                                <!-- Placeholder jika video belum ada -->
                                 <div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-surface-variant/40 border border-white/10 mb-4 flex flex-col items-center justify-center text-center p-4">
                                     <span class="material-symbols-outlined text-4xl text-primary/40 mb-1">videocam_off</span>
                                     <span class="text-xs text-on-surface-variant font-medium">Video Belum Tersedia</span>
@@ -98,7 +97,7 @@
                                     Buka di YouTube
                                 </a>
                             @else
-                                <!-- Button Disabled (Pakeron) -->
+                                <!-- Button Disabled -->
                                 <button onclick="alert('Video YouTube Dusun {{ $dusun['name'] }} belum tersedia saat ini.');" class="w-full bg-surface-variant/50 text-on-surface-variant/60 py-2.5 px-4 rounded-xl font-medium text-xs cursor-not-allowed flex items-center justify-center gap-1.5 border border-white/5">
                                     <span class="material-symbols-outlined text-base text-red-500/50">smart_display</span>
                                     Belum Tersedia

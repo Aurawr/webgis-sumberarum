@@ -15,7 +15,7 @@
                     WebGIS Pelayanan Desa Sumberarum, Kabupaten Magelang — menyajikan informasi spasial dan layanan publik desa secara digital.
                 </p>
                 <div class="flex items-center gap-3 mt-1">
-                    <a href="#" aria-label="Instagram" class="flex items-center justify-center w-10 h-10 rounded-full bg-on-primary/10 hover:bg-secondary-fixed hover:text-primary transition-all">
+                    <a href="https://www.instagram.com/kominfomagelang/" aria-label="Instagram" class="flex items-center justify-center w-10 h-10 rounded-full bg-on-primary/10 hover:bg-secondary-fixed hover:text-primary transition-all">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5 fill-current">
                             <path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.06 2 .25 2.4.42.6.24 1 .53 1.5 1 .5.5.8 1 1 1.5.17.4.36 1.2.42 2.4.07 1.3.07 1.7.07 4.9s0 3.6-.07 4.9c-.06 1.2-.25 2-.42 2.4-.24.6-.53 1-1 1.5-.5.5-1 .8-1.5 1-.4.17-1.2.36-2.4.42-1.3.07-1.7.07-4.9.07s-3.6 0-4.9-.07c-1.2-.06-2-.25-2.4-.42-.6-.24-1-.53-1.5-1-.5-.5-.8-1-1-1.5-.17-.4-.36-1.2-.42-2.4C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.06-1.2.25-2 .42-2.4.24-.6.53-1 1-1.5.5-.5 1-.8 1.5-1 .4-.17 1.2-.36 2.4-.42C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.15 0-3.5 0-4.75.07-.98.04-1.5.2-1.86.34-.47.18-.8.4-1.15.75-.35.35-.57.68-.75 1.15-.14.36-.3.88-.34 1.86C3.08 8.5 3.08 8.85 3.08 12s0 3.5.07 4.75c.04.98.2 1.5.34 1.86.18.47.4.8.75 1.15.35.35.68.57 1.15.75.36.14.88.3 1.86.34 1.25.07 1.6.07 4.75.07s3.5 0 4.75-.07c.98-.04 1.5-.2 1.86-.34.47-.18.8-.4 1.15-.75.35-.35.57-.68.75-1.15.14-.36.3-.88.34-1.86.07-1.25.07-1.6.07-4.75s0-3.5-.07-4.75c-.04-.98-.2-1.5-.34-1.86-.18-.47-.4-.8-.75-1.15-.35-.35-.68-.57-1.15-.75-.36-.14-.88-.3-1.86-.34C15.5 4 15.15 4 12 4zm0 3.8a4.2 4.2 0 110 8.4 4.2 4.2 0 010-8.4zm0 1.8a2.4 2.4 0 100 4.8 2.4 2.4 0 000-4.8zm4.4-2.6a1 1 0 110 2 1 1 0 010-2z"/>
                         </svg>
@@ -36,7 +36,7 @@
             <!-- Tautan Penting -->
             <div class="md:col-span-2 flex flex-col gap-3">
                 <h4 class="font-headline-md text-headline-md text-tertiary-fixed dark:text-tertiary-fixed-dim font-bold mb-1">Tautan Penting</h4>
-                <a href="#" target="_blank" rel="noopener" class="font-body-md text-body-md text-on-primary/75 hover:text-secondary-fixed transition-all w-fit flex items-center gap-1">
+                <a href="https://www.beritamagelang.id/" target="_blank" rel="noopener" class="font-body-md text-body-md text-on-primary/75 hover:text-secondary-fixed transition-all w-fit flex items-center gap-1">
                     Website Kab. Magelang
                     <span class="material-symbols-outlined text-sm">open_in_new</span>
                 </a>
