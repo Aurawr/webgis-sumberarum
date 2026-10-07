@@ -7,11 +7,15 @@ use Illuminate\Support\Facades\DB;
 
 class SarprasController extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     */
     public function index()
     {
         $data = DB::table('sarpras')
             ->whereNotNull('geom')
             ->whereRaw('ST_IsEmpty(geom) = false')
+            ->whereRaw('ST_X(geom) > 0')
             ->select(
                 'id',
                 'kelas',
@@ -19,6 +23,7 @@ class SarprasController extends Controller
                 DB::raw('ST_AsGeoJSON(
                     CASE
                         WHEN ST_X(ST_Centroid(geom)) > 180 THEN ST_Transform(ST_SetSRID(geom, 32749), 4326)
+                        WHEN ST_SRID(geom) != 4326 AND ST_SRID(geom) != 0 THEN ST_Transform(geom, 4326)
                         ELSE ST_SetSRID(geom, 4326)
                     END
                 ) as geom')
@@ -35,11 +40,66 @@ class SarprasController extends Controller
                     'toponim' => $row->toponim,
                 ],
             ];
-        });
+        })->filter(function ($feature) {
+            if (!$feature['geometry'] || empty($feature['geometry']->coordinates)) {
+                return false;
+            }
+            $coords = $feature['geometry']->coordinates;
+            return is_numeric($coords[0]) && is_numeric($coords[1])
+                && is_finite($coords[0]) && is_finite($coords[1]);
+        })->values();
 
         return response()->json([
             'type' => 'FeatureCollection',
             'features' => $features,
         ]);
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function create()
+    {
+        //
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(Request $request)
+    {
+        //
+    }
+
+    /**
+     * Display the specified resource.
+     */
+    public function show(string $id)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(string $id)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, string $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(string $id)
+    {
+        //
     }
 }

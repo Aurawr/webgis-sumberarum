@@ -258,8 +258,8 @@
                         var props = feature.properties
                         var popupContent = '<div class="p-1 text-slate-800">' +
                             '<h4 class="font-bold text-sm text-purple-800 mb-1">Sarana Prasarana</h4>' +
-                            '<p class="text-xs"><b>Toponim:</b> ' + (props.toponim || '-') + '</p>' +
                             '<p class="text-xs"><b>Kelas:</b> ' + (props.kelas || '-') + '</p>' +
+                            '<p class="text-xs"><b>Toponim:</b> ' + (props.toponim || '-') + '</p>' +
                             '</div>'
                         layer.bindPopup(popupContent)
                     }
