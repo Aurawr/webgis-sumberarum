@@ -22,7 +22,7 @@
         'Dasekan'       => 'Dasekan_A1.pdf',
         'Dimajar 1'     => 'Dimajar1_A1.pdf',
         'Dimajar 2'     => 'Dimajar2_A1.pdf',
-        'Dimajar 3'     => 'Dimajar3_A1.pdf',
+        'Dimajar 3'     => 'Dimanjar3_A1.pdf',
         'Gunung Bakal'  => 'GunungBakal_A1.pdf',
         'Kasuran'       => 'Kasuran_A1.pdf',
         'Kerban'        => 'Kerban_A1.pdf',
